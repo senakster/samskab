@@ -1,0 +1,30 @@
+.flex_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    > * {
+        flex: 1 1;
+        min-width: 290px;
+    }
+}
+.flex_child70 {
+    flex: 7 1;
+}
+.flex_child50 {
+    flex: 5 1;
+}
+.flex_child30 {
+    flex: 3 1;
+}
+.mobile {
+    .flex_child70 {
+        width: 100%;
+    }
+    .flex_child50 {
+        width: 100%;
+    }
+    .flex_child30 {
+        width: 100%;
+    }
+}

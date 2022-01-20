@@ -1,0 +1,120 @@
+.Button {
+    // border: 1px solid var(--text-color);
+
+    border: none;
+    // border-radius: .3em;
+    padding: .4em;
+    margin: 0.1em .1em;
+    color: var(--text-color);
+    background: var(--background-color);
+    cursor: pointer;
+    transition: all 100ms;
+    position: relative;
+    z-index: 2;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: var(--primary-gradient);
+        opacity: .2;
+    }
+    &:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: var(--secondary-gradient);
+        opacity: .2;
+    }
+    // &:focus, 
+    &.fixed {
+        position: fixed;
+    }
+    &.fixed-ul{
+        position: fixed;
+        top: 2em;
+        left: 2em;
+    }
+    &.fixed-ur{
+        position: fixed;
+        top: 2em;
+        right: 2em;
+    }
+    &.fixed-bl{
+        position: fixed;
+        bottom: 2em;
+        left: 2em;
+    }
+    &.fixed-br{
+        position: fixed;
+        bottom: 2em;
+        right: 2em;
+    }
+    &.abs {
+        position: absolute;
+    }
+    &.abs-ul{
+        position: absolute;
+        top: 2em;
+        left: 2em;
+    }
+    &.abs-ur{
+        position: absolute;
+        top: 2em;
+        right: 2em;
+    }
+    &.abs-bl{
+        position: absolute;
+        bottom: 2em;
+        left: 2em;
+    }
+    &.abs-br{
+        position: absolute;
+        bottom: 2em;
+        right: 2em;
+    }
+    &:active, &.active {
+        // background-color: var(--primary-dark-color);
+        background: var(--primary-gradient);
+        // text-shadow: 0 0 .2em var(--text-color);
+    }
+
+    &.big {
+        font-size: 1.6em;
+    }
+
+    &.small {
+        font-size: 70%;
+    }
+
+    &.maxZIndex {
+        z-index: 1000000;
+    }
+    &.rounded {
+        border-radius: 4em;
+    }
+    &.transparent {
+        background: transparent;
+        &::before {
+        background: transparent;
+
+        }
+        border: solid .03em var(--text-color);
+    }
+    &.singleCharClose {
+        width: 2em;
+        height: 2em;
+        border-radius: 1em; 
+        &::before {
+            border-radius: 1em; 
+        }
+    }
+}

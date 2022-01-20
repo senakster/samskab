@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from '_state/store'
+import { Provider } from 'react-redux'
+import '_translation/i18n.http';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('samskab_root')
 );
 
 // If you want to start measuring performance in your app, pass a function

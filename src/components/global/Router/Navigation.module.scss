@@ -1,0 +1,22 @@
+@import "/src/_style/include-media.scss";
+.Navigation {
+    nav {
+        ul {
+            list-style-type: none;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: baseline;
+            align-items: baseline;    
+            gap: 10px;
+            li.link {
+                font-size: 3vh;
+            }
+        }
+    }
+}

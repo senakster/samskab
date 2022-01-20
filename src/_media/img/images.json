@@ -1,0 +1,18 @@
+{
+    "logo": {
+        "id": "gnf-logo",
+        "url": "%PUBLIC_URL%/logo/gnf-logo.svg"
+    },
+    "title": {
+        "id": "gnf-text",
+        "url": "%PUBLIC_URL%/logo/gnf-text.svg"
+    },
+    "sprites": "_media/img/svg-defs.svg",
+    "have": "https://www.omstilling.nu/wp-content/uploads/2013/08/timthumb.jpg",
+    "mark": "https://www.omstilling.nu/wp-content/uploads/2018/10/dylan-de-jonge-449577-unsplash-2.jpg",
+    "boliger": "%PUBLIC_URL%/media/img/boliger.jpg",
+    "københavn": "%PUBLIC_URL%/media/img/købehavn.jpg",
+    "markblomster": "%PUBLIC_URL%/media/img/markblomster.jpg",
+    "Nørrebro-bolig": "%PUBLIC_URL%/media/img/Nørrebro-bolig.jpg",
+    "Samskab-placeholder": "%PUBLIC_URL%/media/img/Samskab-placeholder.jpg"
+}

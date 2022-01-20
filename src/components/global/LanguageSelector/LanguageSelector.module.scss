@@ -1,0 +1,110 @@
+.LanguageSelector {
+    &.fixed {
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    width: min-content;
+    z-index: 100;
+    }
+    &.inline {
+        display: inline-block;
+    }
+    padding: .5em;
+    transition: opacity 500ms;
+    backdrop-filter: blur(3px);
+    border-radius: 0 0 4em 0;
+            &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-color);
+            opacity: 0;
+            border-radius: 0 0 4em 0;
+            box-shadow: 0 0 2em var(--background-color);;
+            z-index: -1;
+            transition: opacity 500ms;
+        }
+    &.scrolled {
+        opacity: .2;
+        &:not(.active):hover {
+           opacity: 1; 
+        }
+        &::before {
+            opacity: .4;
+        }
+    }
+        
+    .currentLng {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        // font-size: ;
+        height: 3em;
+        gap: 3px;
+    }
+    .options {
+        width: max-content;
+        padding: .5em;
+        max-width: 80vw;
+        overflow: auto;
+        max-height: 0;
+        opacity: 1;
+        overflow: visible;
+        max-height: 10em;
+            ul {
+            list-style-type: none;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+            position: relative;
+            li {
+                // display: inline-block;
+                transition: transform 500ms, opacity 500ms, padding 500ms;
+                opacity: 0;
+                button::before {
+                    transition: opacity 500ms;
+                }
+                &:not(.active) {
+                    transform: translateX(-100vw);
+                }
+                &.active {
+                    transform: translateY(calc(var(--nthType) * -100%));
+                    opacity: .8;
+                    button {
+                    text-shadow: 0 0 .3em var(--background-color);
+                    background-color: rgba(0,0,0,0);
+                        &::before {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.active {
+        opacity: 1;
+        ul {
+            li {
+                opacity: 1;
+                &:not(.active) {
+                    transform: translateY(0);
+                }
+                &.active {
+                    transform: translateX(0);
+                    opacity: 1;
+                    button {
+                        &::before {
+                        opacity: 1;
+                        z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
