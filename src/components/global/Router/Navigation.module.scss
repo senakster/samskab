@@ -15,8 +15,33 @@
             align-items: baseline;    
             gap: 10px;
             li.link {
-                font-size: 3vh;
+                font-size: calc(.5em + max(1.4vw,1.4vh));
+                // transition: color 300ms, text-shadow 300ms; 
+                &.active {
+                    text-shadow: 0 0 .4em var(--primary-color);
+                }
             }
         }
+    }
+    &.modal {
+    opacity: 0.9 !important; //hack to counter header scrolled fix-container div:first line ~ 68
+    visibility: visible !important; //hack to counter header media query line ~ 98
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important; 
+    z-index: 2;
+     nav {
+         margin: auto;
+         height: 100%;
+         font-size: 150%;
+         ul {
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+         }
+     }
     }
 }

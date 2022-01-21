@@ -1,5 +1,4 @@
 import React from 'react';
-import { Counter } from '_state/features/counter/Counter';
 import './App.scss';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles, themes } from '_themes';
@@ -10,7 +9,7 @@ import Footer from 'components/ui/Footer/Footer.lazy';
 
 function App() {
   const [theme, setTheme] = React.useState('dark');
-  const [font, setFont] = React.useState('Ubuntu');
+  const [font, setFont] = React.useState('Didact Gothic');
 
   function handleThemeChange(event: any) {
     const target = event.target;
@@ -29,12 +28,11 @@ function App() {
         <GlobalStyles />
         <ErrorBoundary>
           <Router />
-          <Counter />
         </ErrorBoundary>
         <Footer>
-          <Counter />
+          {/* <Counter /> */}
+          <Themes variant="minimal" theme={theme} font={font} handlers={{ handleThemeChange, handleFontChange }} />
         </Footer>
-        <Themes variant="minimal" theme={theme} font={font} handlers={{ handleThemeChange, handleFontChange }} />
       </ThemeProvider>
     </div>
   );

@@ -1,9 +1,14 @@
 .Themes {
+    &.fixed {
     position: fixed;
     top: 0;
     right: 0;
-    margin: 1em;
     z-index: 10000;
+    }
+    margin: 1em;
+    border: 1px solid var(--text-color);
+    width: min-content;
+    padding: 5px;
     .colorBox {
         .title {cursor: pointer};
         .cbContainer {

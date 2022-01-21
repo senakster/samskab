@@ -4,7 +4,8 @@ import styles from './LanguageSelector.module.scss';
 import { useTranslation } from 'react-i18next';
 import Button from 'components/ui/Button/Button';
 
-const LanguageSelector: React.FC<{scroll?: boolean, variant?: string}> = ({scroll, variant}) => {
+export type Props = { scroll?: boolean, variant?: string }
+const LanguageSelector: React.FC<Props> = ({scroll, variant}) => {
   const [active, setActive] = React.useState(false)
   const [scrolled, setScrolled] = React.useState(scroll || false)
   const { i18n } = useTranslation()
@@ -45,7 +46,6 @@ const LanguageSelector: React.FC<{scroll?: boolean, variant?: string}> = ({scrol
   function toggleActive() {
     setActive(!active)
   }
-  console.log(variant)
   return (
     <div 
     className={`${styles.LanguageSelector} 

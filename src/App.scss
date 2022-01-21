@@ -1,6 +1,29 @@
+@import 'src/_style/animations.scss';
+
 .App {
   font-family: var(--ff), sans-serif;
   * {
     box-sizing: border-box;
+  }
+  .page_title {
+    display: block;
+    width: 100%;
+    font-size: 2.4em;
+    text-align: center;
+    opacity: 0;
+    animation: fade-in 700ms forwards;
+
+    &::after {
+      content: '';
+      display: block;
+      margin:auto;
+      height: 3px;
+      width: 60%;
+      opacity: .1;
+      background-color: var(--text-color);
+      transform: scale(0);
+      border-radius: 2px;
+      animation: stretch 2000ms forwards ease-out;
+    }
   }
 }

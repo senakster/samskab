@@ -2,22 +2,67 @@ import Infobox from 'components/ui/Infobox/Infobox';
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import styles from './Home.module.scss';
-
+import results from 'components/views/Results/reultsData';
 const Home: React.FC = () => {
   const { t } = useTranslation('home');
   return (
-
     <div className={styles.Home} data-testid="Home">
+      <h1 className="page_title">{'SAMSKAB'}</h1>
       <div className={`${styles.flex_container} flex_container`}>
         <div className={`${styles.flex_child70} flex_child70`}>
           <h1>{t('title')}</h1>
           <p>{t('subheader')}</p>
           <h2>{t('p1.header')}</h2>
+          <p><i>
+            <Trans ns="home" i18nKey="project_description_link">
+              Læs hele projektbeskrivelsen her: <a href={results.find(r => r.id === 'pw0-1')?.url} target="_blank" rel="noreferrer">Link</a>
+            </Trans>
+          </i></p>
           <p>{t('p1.p1')}</p>
-          {/* <p>{t()}</p> */}
+          <p>
+            <Trans ns={`home`} i18nKey={`p2.p1`}>
+              SAMSKAB projektet har fem sammenhængende formål, som er at:
+            </Trans>
+          </p>
+          <ol>
+            <li>
+              <Trans ns={`home`} i18nKey={`p2.li1`}>
+              Opnå viden om hvordan grønne nabofællesskaber etableres, enten fra start
+                eller gennem en transformation af eksisterende grå boligforeninger.
+              </Trans>
+            </li>
+            <li>
+              <Trans ns={`home`} i18nKey={`p2.li2`}>
+                Anvende denne viden til at styrke og opskalere udbredelsen af grønne
+                nabofællesskaber og dermed bidrage til den borgerdrevne grønne omstilling.
+              </Trans>
+            </li>
+            <li>
+              <Trans ns={`home`} i18nKey={`p2.li3`}>
+              Dokumentere miljø- og social impact i forhold til grønne nabofællesskaber.
+              </Trans></li>
+            <li>
+              <Trans ns={`home`} i18nKey={`p2.li4`}>
+              Bidrage med videnskabelig viden om hvordan miljøadfærd og praksis kan
+                styrkes, påvirkes og opskaleres gennem fællesskab og kollektiv handling.
+              </Trans></li>
+            <li>
+              <Trans ns={`home`} i18nKey={`p2.li5`}>
+              Følge udbredelsen af min. 100 grønne nabofællesskaber i Danmark.
+                Udgangspunktet for SAMSKAB er, at en betydende grøn omstilling kræver ikke blot
+              </Trans></li>
+          </ol>
+          <p><Trans ns={`home`} i18nKey={`p2.p2`}>
+            Udgangspunktet for SAMSKAB er, at en betydende grøn omstilling kræver ikke blot
+            politisk regulering og teknologiske løsninger, men også civil handling og
+            adfærdsændringer. Hypotesen i SAMSKAB bygger på, at samarbejde og kollektiv
+            handling for fælles mål i grønne nabofællesskaber forstærker miljøadfærd og fremmer
+            både en miljømæssig og en social dagsorden.
+            </Trans>
+          </p>
         </div>
         <div className={`${styles.flex_child30} flex_child30`}>
-          <Infobox> 
+          <Infobox>
             <h2>{t('infobox.header')}</h2>
             <p>{t('infobox.p1')}</p>
             <p>

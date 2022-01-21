@@ -9,6 +9,7 @@ const Themes: React.FC<any> = ({ variant, theme, font, handlers }) => {
   const [cbCollapse, setCb] = React.useState(false);
   return (
     <div className={styles.Themes}>
+      <h4>Theme Selector</h4>
       {variant !== 'minimal' && <h2>{`${capitalize(theme)} Theme`}</h2>}
       <select onChange={handlers.handleThemeChange}
         value={themes.find((t) => t.name === theme)?.id}>

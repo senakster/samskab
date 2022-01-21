@@ -8,16 +8,17 @@ const ImageCarousel: React.FC<{
 }> = ({images, interval, variant}) => {
 
   const [active, setActive] = React.useState<number>(0)
+  
+  function auto_rotate() {
+    const newVal = images && active < images?.length - 2 ? active + 1 : 0;
+    setActive(newVal)
+  }
   React.useEffect(() => {
-    function auto_rotate() {
-      const newVal = images && active < images?.length - 1 ? active + 1 : 0;
-      setActive(newVal)
-    }
     const rotation = setInterval(auto_rotate, interval || 5000)
     return () => {
       clearInterval(rotation)
     }
-  },[])
+  })
 
   return (
   <>

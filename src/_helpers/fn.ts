@@ -15,6 +15,7 @@ const helpers = {
     canConnect,
     embedYT,
     isValidHttpUrl,
+    onlyUnique,
     // parse,
     throttle,
     truncate,
@@ -133,7 +134,9 @@ export function nextId(AOO: { id: number | string; }[]): number {
  * DATA MANIPULATION
  */
 
-
+export function onlyUnique(value: string | number, index: number, self: any) {
+    return self.indexOf(value) === index;
+}
 
 /**
  * For use in Array.sort(sortObjectArray)
