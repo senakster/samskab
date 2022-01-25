@@ -1,6 +1,8 @@
 {
-    "home": "hjem",
-    "results": "resultater",
+    "home": "Om",
+    "results": "Resultater",
     "timeline": "Tidslinje",
-    "collaborators": "samarbejdspartnere"
+    "participants": "Deltagere",
+    "collaborators": "Samarbejdspartnere",
+    "contact": "Kontakt"
 }

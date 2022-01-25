@@ -10,10 +10,14 @@ import Loading from '../Loading/Loading';
 import Header from 'components/ui/Header/Header.lazy';
 
 export const UnauthRouteList: TRoute[] = [
-  ...RouteList.filter((r) => ['Home', 'Results', 'Timeline','Collaborators'].includes(r.name))
+  ...RouteList.filter((r) => 
+  ['Home', 'Results', 'Timeline','Participants','Collaborators','Contact']
+  .includes(r.name))
 ]
 export const AuthRouteList: TRoute[] = [
-  ...RouteList.filter((r) => ['Home', 'Results', 'Timeline', 'Collaborators'].includes(r.name))
+  ...RouteList.filter((r) => 
+  ['Home', 'Results', 'Timeline', 'Participants', 'Collaborators', 'Contact']
+.includes(r.name))
 ]
 
 const Router: React.FC = () => {

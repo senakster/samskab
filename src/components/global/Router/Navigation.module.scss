@@ -18,13 +18,19 @@
                 font-size: calc(.5em + max(1.4vw,1.4vh));
                 // transition: color 300ms, text-shadow 300ms; 
                 &.active {
-                    text-shadow: 0 0 .4em var(--primary-color);
+                    a {
+                        color: var(--primary-color);
+                        font-weight: bold;
+                        // -webkit-text-fill-color: var(--primary-color);
+                        // -webkit-text-stroke: 1px var(--text-color);
+                    }
+                    // text-shadow: 0 0 .1em var(--background-color);
                 }
             }
         }
     }
     &.modal {
-    opacity: 0.9 !important; //hack to counter header scrolled fix-container div:first line ~ 68
+    opacity: 0.96 !important; //hack to counter header scrolled fix-container div:first line ~ 68
     visibility: visible !important; //hack to counter header media query line ~ 98
     background-color: var(--background-color);
     position: fixed;

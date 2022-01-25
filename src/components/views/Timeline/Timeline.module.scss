@@ -1,1 +1,29 @@
-.Timeline {}
+.Timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+        ul {
+            list-style-type: none;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+        }
+    .phases {
+        ol {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 1em;
+        }
+        min-width: min(290px, 100%);
+        flex: 2 1;
+
+    }
+    .workPackages {
+        min-width: min(400px, 100%);
+        flex: 5 1;
+    }
+}

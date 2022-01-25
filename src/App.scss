@@ -8,7 +8,7 @@
   .page_title {
     display: block;
     width: 100%;
-    font-size: 2.4em;
+    font-size: min(2.4em, 9vw);
     text-align: center;
     opacity: 0;
     animation: fade-in 700ms forwards;
@@ -25,5 +25,11 @@
       border-radius: 2px;
       animation: stretch 2000ms forwards ease-out;
     }
+  }
+  .offset-anchor {
+    display: block;
+    position: relative;
+    top: -20vh;
+    visibility: hidden;
   }
 }

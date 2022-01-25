@@ -12,9 +12,9 @@ const Themes: React.FC<any> = ({ variant, theme, font, handlers }) => {
       <h4>Theme Selector</h4>
       {variant !== 'minimal' && <h2>{`${capitalize(theme)} Theme`}</h2>}
       <select onChange={handlers.handleThemeChange}
-        value={themes.find((t) => t.name === theme)?.id}>
+        value={theme}>
         {themes.map((t) =>
-          <option key={t.id} value={t.id}
+          <option key={t.id} value={t.name}
             style={{
               color: t.theme.text,
               backgroundColor: t.theme.body,

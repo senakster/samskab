@@ -2,7 +2,7 @@ import Infobox from 'components/ui/Infobox/Infobox';
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import styles from './Home.module.scss';
-import results from 'components/views/Results/reultsData';
+import publications from '_data/publicationsData';
 const Home: React.FC = () => {
   const { t } = useTranslation('home');
   return (
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           <h2>{t('p1.header')}</h2>
           <p><i>
             <Trans ns="home" i18nKey="project_description_link">
-              Læs hele projektbeskrivelsen her: <a href={results.find(r => r.id === 'pw0-1')?.url} target="_blank" rel="noreferrer">Link</a>
+              Læs hele projektbeskrivelsen her: <a href={publications.find(r => r.id === 'pw0-1')?.url} target="_blank" rel="noreferrer">Link</a>
             </Trans>
           </i></p>
           <p>{t('p1.p1')}</p>

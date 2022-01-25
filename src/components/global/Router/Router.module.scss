@@ -3,7 +3,7 @@
 .Router {
     .content {
         position: relative;
-        padding: 5%;
+        padding: 20px 5%;
         min-height: 100vh;
         opacity: 0;
         animation: fade-in 1700ms forwards;
@@ -13,12 +13,12 @@
             position: absolute;
             top: 0;
             left: 0;
-            margin: 2.5%;
+            margin: 0 2.5%;
             width: 95%;
-            height: 95%;
+            height: 100%;
             border-radius: 5px;
             background-color: var(--background-color);
-            opacity: .2;
+            opacity: .6;
             box-shadow: 0 0 1em var(--background-color);
         };
         // text-aligjkn: center;

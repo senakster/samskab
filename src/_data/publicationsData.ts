@@ -1,16 +1,16 @@
-import {people, TPeople} from '_data'
+import {people, TPeople} from '_data/peopleData'
 
-export type TResult = {
+export type TPublication = {
     id: string,
     title: string,
     name: string;
-    published: {year: number, month?: number},
+    published?: {year: number, month?: number},
     url: string,
     summary: string,
     cover: string,
     author?: (TPeople | undefined)[], 
 }
-const results = [
+export const publications = [
     {
         id: 'pw0-1',
         title: 'Projektbeskrivelse',
@@ -20,6 +20,6 @@ const results = [
         summary: 'Projektet udfordrer forestillingen om, at den grønne omstilling primært foregår gennem individuel adfærd og teknologisk omstilling ved at påpege, at den i lige så høj grad kan finde sted som en grundlæggende social omstilling, der involverer nabofællesskaber. Projektet bidrager med viden og redskaber, der kan støtte etableringen af helt nye grønne nabofællesskaber samt overgangen fra grå boligforeninger til grønne nabofællesskaber og dermed styrke den grønne omstilling. Grå boligforeninger betegnes her som boligforeninger, der ikke har et direkte fokus på miljø, klima og bæredygtighed, mens grønne nabofællesskaber defineres som grønne, hvor deres medlemmer deler ønsket om at leve mere bæredygtigt og handler i fællesskab på dette ønske.',
         cover: `${process.env.PUBLIC_URL}/media/img/projektbeskrivelse-cover.png`,
         // author: [people.find(p => p.id === 'web1')]
-    },
+    },  
 ]
-export default results
+export default publications

@@ -3,14 +3,20 @@ import ImageCarousel from '../ImageCarousel/ImageCarousel';
 import styles from './Header.module.scss';
 import images from '_media/img/images'
 import LanguageSelector from 'components/global/LanguageSelector/LanguageSelector.lazy';
+// LAYOUT TOGGLE TESTING
+import { useSelector } from 'react-redux';
+import { State } from '_state/store';
 
 // imageCarousel data
 const interval = 10000 //20000
 const variant = 'blurry';
-const imgCarouselLists = {
+// const imgCarouselLists = {
   
-}
+// }
 const Header: React.FC= ({children}) => {
+  // LAYOUT TOGGLE TESTING
+  const fancyBG = useSelector((state: State) => state.layout.fancyBG)
+
   const scrollRef = React.useRef(null);
   const [scrolled, setScrolled] = React.useState(false)
   React.useEffect(() => {
@@ -26,7 +32,8 @@ const Header: React.FC= ({children}) => {
   return (
     <div className={`${styles.Header}`} data-testid="Header">
     <div className={styles.backgroundImage}>
-      <ImageCarousel {...{images, interval, variant}}/>
+        {fancyBG && <ImageCarousel {...{images, interval, variant}}/>}
+      {/* <img src={images[0].url} alt="" /> */}
     </div>
     <div ref={scrollRef} className={` ${scrolled ? styles.scrolled : ''}`}>
       <LanguageSelector variant="fixed" scroll={scrolled}/>

@@ -12,7 +12,7 @@ const Collaborators: React.FC = () => {
       {/* KERNEPARTNERE */}
       <h1 className="page_title">{t('collaborators')}</h1>
       <div className={styles.Collaborators} data-testid="Collaborators">
-        <h2>{t('Kernepartnere')}</h2>
+        <h2 className={styles.subHeading}>{t('Kernepartnere')}</h2>
         <div className={styles.category}>
           {collaborators.key_partners.map((c) =>
             <CollabCard key={c.id} data={c} />
@@ -20,7 +20,7 @@ const Collaborators: React.FC = () => {
         </div>
 
         {/* FORSKNING */}
-        <h2>{t('forskningssamarbejdspartnere')}</h2>
+        <h2 className={styles.subHeading}>{t('forskningssamarbejdspartnere')}</h2>
         <div className={styles.category}>
           {collaborators.forskningssamarbejdspartnere.map(c =>
             <CollabCard key={c.id} data={c} />
@@ -28,7 +28,7 @@ const Collaborators: React.FC = () => {
         </div>
 
         {/* FUNDING */}
-        <h2>{t('Projektet er støttet af')}</h2>
+        <h2 className={styles.subHeading}>{t('Projektet er støttet af')}</h2>
         <div className={styles.category}>
           {collaborators.funding.map(c =>
             <CollabCard key={c.id} data={c} />
@@ -36,7 +36,7 @@ const Collaborators: React.FC = () => {
         </div>
 
         {/* PRAKSISPARTNERE */}
-        <h2>{t('praksissamarbejdspartnere')}</h2>
+        <h2 className={styles.subHeading}>{t('praksissamarbejdspartnere')}</h2>
         <div className={styles.category}>
           <div className={styles.subCatBox}>
           <h3>{t('Kommuner')}</h3>
@@ -65,7 +65,7 @@ const Collaborators: React.FC = () => {
         </div>
 
         {/* RÅDGIVENDE PANEL */}
-        <h2>{t('Rådgivende panel')}</h2>
+        <h2 className={styles.subHeading}>{t('Rådgivende panel')}</h2>
         <div className={styles.category}>
           {collaborators.rådgivendepanel.map(c =>
             <Mention key={c.name} {...c} variant={`flex11`}/>

@@ -1,5 +1,5 @@
 .CollabCard {
-    min-width: 290px;
+    min-width: min(290px, 100%);
     background-color: var(--brandColor);
     // color: #fff;
     box-shadow: 0 0 1em rgba(0,0,0,.5);
@@ -28,7 +28,7 @@
     }
     .content {
         color: white;
-        text-shadow: 0 0 1.5em black;
+        text-shadow: 0 0 .2em black;
         & > a {
             color: whitesmoke;
         }

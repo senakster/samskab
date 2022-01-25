@@ -26,9 +26,9 @@ i18n
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
         backend: {
-            			// for all available options read the backend's repository readme file
+            // for all available options read the backend's repository readme file
             loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json?lng={{lng}}&{{ns}}`,
-            // crossDomain: true
+            crossDomain: true
         },
         fallbackLng: 'da',
         debug: false,

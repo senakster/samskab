@@ -1,6 +1,8 @@
 {
-    "home": "home",
-    "results": "results",
+    "home": "About",
+    "results": "Results",
     "timeline": "timeline",
-    "collaborators": "collaborators"
+    "participants": "participants",
+    "collaborators": "collaborators",
+    "contact":"contact" 
 }

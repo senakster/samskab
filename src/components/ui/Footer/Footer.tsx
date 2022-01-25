@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.scss';
-import images from '_media/img/images'
+import LayoutToggle from 'components/global/LayoutToggle/LayoutToggle';
 
 
 const Footer: React.FC = ({children}) => {
@@ -8,7 +8,7 @@ const Footer: React.FC = ({children}) => {
   return (
     <div className={styles.Footer} data-testid="Footer">
     {children}
-
+    <LayoutToggle />
   </div>
 );
 }

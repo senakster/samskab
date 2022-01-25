@@ -57,7 +57,7 @@ const LanguageSelector: React.FC<Props> = ({scroll, variant}) => {
     onClick={toggleActive}
     >
       <div className={styles.currentLng}>
-        <SvgIcon {...{ id: 'globe', width: '2em' }} />
+        <SvgIcon {...{ id: 'globe', width: '1.5em' }} />
         <div className={styles.options}>
           <ul>
             {langs.map((l,i) =>

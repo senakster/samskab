@@ -1,3 +1,16 @@
 {
-    "timeline": "timeline"
+    "timeline": "timeline",
+    "Faser": "Phases",
+    "Resultater": "Results",
+    "Beskrivelse": "Description",
+    "phases": {
+        "title": "Phases"
+    },
+    "wp" : {
+        "title": "Work Packages (WP)",
+        "wp1": {
+            "name": "Work Package 1: Motivation and viability"
+        }
+    }
+
 }

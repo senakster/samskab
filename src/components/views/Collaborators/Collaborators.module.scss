@@ -1,4 +1,7 @@
 .Collaborators {
+    .subHeading {
+
+    }
     .category {
         display: flex;
         flex-wrap: wrap;
@@ -6,12 +9,22 @@
         align-items: flex-start;
         width: 100%;
         gap: 20px;
+        &::after{
+            content: '';
+            display: inline-block;
+            height: 2px;
+            width: 100%;
+            margin: auto;
+            opacity: .3;
+            background-color: var(--text-color);
+        };
         & > * {
             box-sizing: border-box;
             flex: 0 1;
         }
         .Mention.flex11 {
-            flex: 1 1;
+                flex: 0 0 min(300px, 90vw);
+            // flex: 1 1;
         }
         .subCatBox {
             width: 100%;

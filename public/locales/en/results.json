@@ -1,3 +1,11 @@
 {
-    "results": "results"
-}
+    "title": "Results and Publications",
+    "opsummering": "summary",
+    "Publikationer": "publications",
+    "Andre Resultater": "Other Results",
+    "pw0-1": {
+        "title": "Project desription", 
+        "name": "Project 40322: SAMSKAB - FROM GRAY HOUSING ASSOCIATIONS TO GREEN NEIGHBORHOOD COMMUNITIES (in danish)",
+        "summary":"The project challenges the notion that the green transition takes place primarily through individual behavior and technological change by pointing out that it can take place just as much as a fundamental social change involving neighboring communities. The project contributes knowledge and tools that can support the establishment of completely new green neighborhood communities as well as the transition from gray housing associations to green neighborhood communities and thereby strengthen the green transition. Gray housing associations are referred to here as housing associations that do not have a direct focus on the environment, climate and sustainability, while green neighboring communities are defined as green, where their members share the desire to live more sustainably and act together on this desire."
+        }
+    }

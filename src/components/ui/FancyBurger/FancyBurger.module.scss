@@ -11,7 +11,7 @@
     .burger-menu {
       position: fixed;
       top: 0vh;
-      right: 3vw;
+      right: 2vw;
       // background-color: rgba(0,0,0,.1);
       width: calc($burger-size * .7);
       height: $burger-size;
@@ -19,6 +19,7 @@
       display: block;
       outline: none;
       cursor: pointer;
+      transform: translateY(-10%);
       &:hover {
         .line::after {
         transform: translateX(0);
@@ -28,10 +29,11 @@
         position: absolute;
         width: 100%;
         height: calc($burger-size / 12);
-        background: hsla(210, 29%, 24%, 0.3);
+        // background: hsla(210, 29%, 24%, 0.3);
+        background: var(--text-color);
         border-radius: calc($burger-size / 2);
         overflow: hidden;
-        box-shadow: 0 0 1em;
+        // box-shadow: 0 0 .3em;
         transition: 0.5s;
       &:nth-child(1) {
         top: 30%;
