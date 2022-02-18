@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFancyBG, setFontFamily, setTheme } from '_state/features/layout/layoutSlice';
+import { setFancyBG, setFontFamily, setHeaderFont, setTheme } from '_state/features/layout/layoutSlice';
 import { State } from '_state/store';
 import Themes from '../Themes/Themes';
 import styles from './LayoutToggle.module.scss';
@@ -18,13 +18,16 @@ const LayoutToggle: React.FC = () => {
     const { value } = e.target
     dispatch(setFontFamily(value))
   }
-  
+  function handleHeaderFontChange(e: any) {
+    const { value } = e.target
+    dispatch(setHeaderFont(value))
+  }
   return (
     <>
    <h1 className="page_title">Theme testing</h1>
   <div className={styles.LayoutToggle} data-testid="LayoutToggle">
     
-    <Themes variant="minimal" theme={l.theme} font={l.fontFamily} handlers={{ handleThemeChange, handleFontChange }} />
+    <Themes variant="minimal" theme={l.theme} font={l.fontFamily} handlers={{ handleThemeChange, handleFontChange, handleHeaderFontChange }} />
     <label>
       <span>Toggle Fancy Background</span>
       <input type="checkbox" checked={l.fancyBG} onChange={() => { dispatch(setFancyBG(!l.fancyBG))}}/>

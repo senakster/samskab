@@ -1,3 +1,4 @@
+import Button from 'components/ui/Button/Button'
 import React from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { HashLink } from 'react-router-hash-link'
@@ -7,15 +8,24 @@ import styles from './WPBox.module.scss'
 
 const WorkPackageBox: React.FC<{ data: TWorkPackage, active: string, openWP: (id: string) => void}> = ({ data, active, openWP }) => {
     const { t } = useTranslation('timeline')
+    // const [closing, setClosing] = React.useState(false)
     function setActive() {
+        // setClosing(!active)
+        // setTimeout(() => openWP(active === data.id ? '' : data.id), 1)
         openWP(active === data.id ? '' : data.id)
     }
 
+    React.useEffect(() => {
+        const scrollEl = document.getElementById('workPackages')
+        active && scrollEl?.scrollIntoView()
+    }, [active])
     return (
         <div  
         className={`${styles.WorkPackageBox} ${active === data.id? styles.active : ''}`}
         onClick={setActive}>
-            <span className="offset-anchor-abs" id={data.id}></span>
+            <Button label="x" variant="singleCharClose" onClick={() => openWP('')}/>
+            {/* {JSON.stringify(closing)} */}
+            {/* <span className={`${styles.offset_anchor_abs}`} id={data.id}></span> */}
             {/* <HashLink to={`#workPackages`}> */}
             <h3 className={`${styles.more}`} >
                 <Trans ns="timeline" i18nKey={`${data.id}.name`}>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router';
 import workPackages, { phases } from '_data/workPackagesData';
+import Results from '../Results/Results.lazy';
 import PhaseBox from './PhaseBox';
 import styles from './Timeline.module.scss';
 import WorkPackageBox from './WPBox';
@@ -39,7 +40,7 @@ const Timeline: React.FC = () => {
               WORK PACKAGES (WP)
             </Trans>
           </h1>
-        <ul>
+        <ul className={styles.wpList}>
           {workPackages.map(w =>
             <li key={w.id}>
               <WorkPackageBox data={w} active={open} openWP={setOpen} />
@@ -48,6 +49,7 @@ const Timeline: React.FC = () => {
           </ul>
       </div>
       </div>
+      {/* <Results /> */}
   </>
 );
 }

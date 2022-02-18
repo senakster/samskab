@@ -7,6 +7,7 @@ export type State = {
     },
     layout: {
         fancyBG: boolean,
+        headerFont: string,
         fontFamily: string,
         theme: string,
     };

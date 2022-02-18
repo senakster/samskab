@@ -1,3 +1,5 @@
+import Button from "components/ui/Button/Button"
+import btnStyle from "components/ui/Button/Button.module.scss"
 import { t } from "i18next"
 import React from "react"
 import { useLocation } from "react-router"
@@ -16,25 +18,31 @@ function pageMap() {
 export default pageMap
 
 export const Quickjump: React.FC<{data: TPageMap}> = ({data}) => {
+    const [active, setActive] = React.useState<string>('')
+    function changeActive (e: any){
+        const { value } = e.target.dataset
+        setActive(value === active ? '' : value)
+    }
     const location = useLocation()
-    console.log('quicjump', location.pathname) 
     return (
         <>
-        <h3>{t('Hop til: ')}</h3>
+        <h4>{t('Hop til: ')}</h4>
         {/* {JSON.stringify(data)} */}
         <div className="__Quickjump">
             {data.map((at, i) => 
-            <ul key={i}>
-                <li>
-                    <HashLink to={`#${at.anchorTop.id}`}><h4>{at.anchorTop.text}</h4></HashLink>
-                </li>
+            <div key={i} className={`quickList`}>
+            {/* <HashLink to={`#${at.anchorTop.id}`}><h4>{at.anchorTop.text}</h4></HashLink> */}
+                    <Button className={`${active === at.anchorTop.id ? btnStyle.active : ''}`} label={at.anchorTop.text} data-value={at.anchorTop.id} onClick={changeActive} />
+                    <ul className={`${active === at.anchorTop.id ? 'active' : ''}`} >
+                    <li onClick={() => { setActive('') }}><HashLink to={`#${at.anchorTop.id}`}><h4>{at.anchorTop.text}</h4></HashLink></li>
                 {at.subAnchors.map((sa, i)=>
-                    <li key={i}>
-                        <HashLink to={`#${sa.id}`}><span>{sa.text}</span></HashLink>
+                    <li key={i} onClick={() => {setActive('')}}>
+                        <HashLink to={`#${sa.id}`}><span>{sa.text?.split(' - ')[0]}</span></HashLink>
                     </li>
                 )
                 }       
-            </ul>)}
+            </ul>
+            </div>)}
         </div>
         </>
     )

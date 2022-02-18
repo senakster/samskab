@@ -1,4 +1,5 @@
 import Home from "components/views/Home/Home.lazy"
+import About from "components/views/About/About.lazy"
 import Collaborators from "components/views/Collaborators/Collaborators.lazy"
 import Results from "components/views/Results/Results.lazy"
 import Timeline from "components/views/Timeline/Timeline.lazy"
@@ -14,7 +15,8 @@ export type TRoute = {
 }
 
 const RouteList: TRoute[] = [
-    { name: 'Home', categories: ['about'], path: "/", component: Home },
+    { name: 'Home', categories: ['home'], path: "/", component: Home },
+    { name: 'About', categories: ['about'], path: "/about", component: About },
     { name: 'Timeline', categories: ['about'], path: "/timeline", component: Timeline },
     { name: 'Results', categories: ['ressources'], path: "/results", component: Results },
     { name: 'Participants', categories: ['about'], path: "/participants", component: Participants },

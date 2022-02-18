@@ -6,6 +6,9 @@ import LanguageSelector from 'components/global/LanguageSelector/LanguageSelecto
 // LAYOUT TOGGLE TESTING
 import { useSelector } from 'react-redux';
 import { State } from '_state/store';
+import { useNavigate } from 'react-router';
+import logos from '_media/img/logo';
+import SvgIcon from '../SvgIcon/SvgIcon';
 
 // imageCarousel data
 const interval = 10000 //20000
@@ -14,6 +17,7 @@ const variant = 'blurry';
   
 // }
 const Header: React.FC= ({children}) => {
+  const navigate = useNavigate()
   // LAYOUT TOGGLE TESTING
   const fancyBG = useSelector((state: State) => state.layout.fancyBG)
 
@@ -21,7 +25,6 @@ const Header: React.FC= ({children}) => {
   const [scrolled, setScrolled] = React.useState(false)
   React.useEffect(() => {
     function checkScrolled(){
-      // const { offsetTop } = scrollRef.current!
       setScrolled(window.scrollY > 0)
     }
     window.addEventListener('scroll', checkScrolled)
@@ -33,20 +36,19 @@ const Header: React.FC= ({children}) => {
     <div className={`${styles.Header}`} data-testid="Header">
     <div className={styles.backgroundImage}>
         {fancyBG && <ImageCarousel {...{images, interval, variant}}/>}
-      {/* <img src={images[0].url} alt="" /> */}
     </div>
     <div ref={scrollRef} className={` ${scrolled ? styles.scrolled : ''}`}>
       <LanguageSelector variant="fixed" scroll={scrolled}/>
       <div className={styles.fix_container}>
-          <h1>{process.env.REACT_APP_TITLE}
-          {/* <img
-          alt="" 
-          style={{ display: 'inline-block', maxWidth: '100vw', maxHeight: '10vw' }} 
-          src="https://www.omstilling.nu/wp-content/uploads/2013/08/timthumb.jpg" 
-          /> */}
-          </h1>
-
-      {children}
+      <div className={styles.content}>
+          <div className={styles.mainLogo}>
+            <img
+              alt="main logo"
+              src={logos.Logo1HvidSAMSKABtransparent.url}
+            />
+          </div>
+        {children}
+      </div>
       </div>
     </div>
   </div>

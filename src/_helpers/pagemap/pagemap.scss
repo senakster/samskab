@@ -8,5 +8,40 @@
     padding-inline-start: 0px;
     }
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    .quickList{
+        flex: 1 1 200px;  
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        h4 {
+            cursor: pointer;
+        }
+        ul {
+            opacity: 0;
+            background-color: var(--background-color);
+            padding: 5px;
+            position: absolute;
+            top: 110%;
+            left: 0px;
+            min-width: calc(100% - 0px);
+            transition: max-height 300ms,  background-color 300ms, opacity 300ms;
+            max-height: 0;
+            overflow: hidden;
+        }
+            ul.active {
+            opacity: 1;
+
+            max-height: 100vh;
+            z-index: 3;
+            border: 1px solid var(--text-color);
+            }
+    }
 }
+ .offset-anchor {
+    display: block;
+    position: relative;
+    top: -10vh;
+    visibility: hidden;
+  }

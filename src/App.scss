@@ -5,14 +5,21 @@
   * {
     box-sizing: border-box;
   }
+  h1,h2,h3,h4, button, .themed-title {
+    font-family: var(--hf), sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    hyphens: auto;
+    // font-size: larger;
+  }
   .page_title {
     display: block;
     width: 100%;
-    font-size: min(2.4em, 9vw);
+    font-size: min(2.4em, 7vw);
     text-align: center;
     opacity: 0;
     animation: fade-in 700ms forwards;
-
     &::after {
       content: '';
       display: block;
@@ -26,10 +33,5 @@
       animation: stretch 2000ms forwards ease-out;
     }
   }
-  .offset-anchor {
-    display: block;
-    position: relative;
-    top: -20vh;
-    visibility: hidden;
-  }
+
 }

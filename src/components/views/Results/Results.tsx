@@ -62,7 +62,7 @@ const Results: React.FC = () => {
 
       <div className={styles.Results} data-testid="Results">
         {publications.length > 0 &&
-          <div id={`publikationer`} className="__anchor_top">
+        <div id={`publikationer`} className="__anchor_top">
         <h2 className={`${styles.catTitle}`}>{t('Publikationer')}</h2>
         <div className={styles.PublicationsList}>
           {publications && publications.map(r => r.published.year)

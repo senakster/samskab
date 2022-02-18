@@ -25,5 +25,9 @@
     .workPackages {
         min-width: min(400px, 100%);
         flex: 5 1;
+        ul.wpList {
+            position: relative;
+            min-height: 90vh;
+        }
     }
 }

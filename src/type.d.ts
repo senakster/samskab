@@ -68,16 +68,3 @@ type T_LINK = {
     type: 'GET' | 'PUT' | 'DELETE',
     href: string,
 }
-
-const group: TGNFG = {
-    id: 1,
-    name: K\u00f8benhavn,
-    municipality: K\u00f8benhavn,
-    grouptype: kommunegruppe, description: '',
-    status: active,
-    created_at: '',
-    updated_at: ',',
-    grouplinks: [],
-    _links: [],
-    _embedded: { grouplinks: [] }
-}

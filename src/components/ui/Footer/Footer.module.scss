@@ -1,4 +1,17 @@
 .Footer {
+    margin-top: 40px;
+    padding-top: 40px;
     min-height: 20vh;
     background-color: var(--secondary-color);
+    .KernepartnerLogoer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap:2em;
+        // background-color: var(--background-color);
+        padding: 2em;
+        > * {
+            flex: 1;
+        }
+    }
 }

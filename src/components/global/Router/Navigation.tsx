@@ -8,13 +8,13 @@ import FancyBurger from 'components/ui/FancyBurger/FancyBurger';
 
 
 export type Props = { variant?: string}
+
 const Navigation: React.FC<Props> = ({ variant}) => {
     const [path, setPath] = React.useState<string>('')
     const [routes, setRoutes] = React.useState<TRoute[]>([])
     const [modal, setModal] = React.useState<boolean>(false)
 
     const location = useLocation();
-    //    const navigate = useNavigate();
 
     React.useEffect(() => {
         setRoutes(UnauthRouteList)
@@ -42,27 +42,21 @@ const NavContent: React.FC<{ variant?: string, routes?: TRoute[], path: string, 
     ({ variant, routes, path, modal, closeModal }) => {
         const { t } = useTranslation('navigation')
         return (
+            <>
+            
+            <div className={`${styles.Modal}  ${modal ? styles.active : ''}`}>
+                <NavList {...{routes,variant,path,closeModal}}/>
+            </div>
 
-            <div className={`${styles.Navigation} ${variant ? styles[variant] : ''} ${modal ? styles.modal : ''}`}>
+            <div className={`${styles.Navigation} ${variant ? styles[variant] : ''}`}>
                 <nav>
                     <ul>
-                        {modal && routes && routes.filter((r) => r.name !== variant)
+                        {routes && routes.filter((r) => r.name !== variant)
+                            // .filter(r => r.categories?.includes('about') || r.categories?.includes('ressources')) //Include categories in non-modal
                             .map((r) =>
                                 <li key={r.name}
                                     className={
-                                        `${(path.split('/')[1] === r.path.split('/')[1] || path === r.path) ? styles.active : ''} 
-                                    ${styles.link}
-                                    themed-title`
-                                    }>
-                                    <Link to={r.path} onClick={closeModal}><span>{t(`${r.name.toLowerCase()}`).toUpperCase()}</span></Link>
-                                </li>
-                            )}
-                        {!modal && routes && routes.filter((r) => r.name !== variant)
-                            .filter(r => r.categories?.includes('about') || r.categories?.includes('ressources'))
-                            .map((r) =>
-                                <li key={r.name}
-                                    className={
-                                        `${(path.split('/')[1] === r.path.split('/')[1] || path === r.path) ? styles.active : ''} 
+                                        `${(path.split('/')[1] === r.path.split('/')[1] || path === r.path) ? `${styles.active}` : ''} 
                                     ${styles.link}
                                     themed-title`
                                     }>
@@ -72,5 +66,27 @@ const NavContent: React.FC<{ variant?: string, routes?: TRoute[], path: string, 
                     </ul>
                 </nav>
             </div>
+            </>
+        )
+    }
+
+
+const NavList: React.FC<{ routes?: TRoute[], variant?: string, path: string, closeModal: () => void}> = ({routes, variant, path, closeModal}) => {
+        const { t } = useTranslation('navigation')
+        return (
+            <ul>
+                {routes && routes.filter((r: TRoute) => r.name !== variant)
+                    // .filter(r => r.categories?.includes('about') || r.categories?.includes('ressources')) //Include categories in non-modal
+                    .map((r) =>
+                        <li key={r.name}
+                            className={
+                                `${(path.split('/')[1] === r.path.split('/')[1] || path === r.path) ? `${styles.active}` : ''} 
+                                    ${styles.link}
+                                    themed-title`
+                            }>
+                            <Link to={r.path} onClick={closeModal}><span>{t(`${r.name.toLowerCase()}`).toUpperCase()}</span></Link>
+                        </li>
+                    )}
+            </ul>
         )
     }

@@ -1,13 +1,8 @@
 .CollabCard {
     min-width: min(290px, 100%);
+    max-width: min(500px, 50%);
     background-color: var(--brandColor);
     // color: #fff;
-    box-shadow: 0 0 1em rgba(0,0,0,.5);
-    border-radius: 10px;
-    transition: box-shadow 300ms;
-    &:hover {
-        box-shadow: 0 0 3em rgba(255,255,255,.5);
-    }
     display: inline-block;
     overflow: auto;
     padding: 10px;
@@ -26,6 +21,14 @@
         margin:auto;
     }
     }
+    &.default {
+
+    box-shadow: 0 0 1em rgba(0,0,0,.5);
+    border-radius: 10px;
+    transition: box-shadow 300ms;
+    &:hover {
+        box-shadow: 0 0 3em rgba(255,255,255,.5);
+    }
     .content {
         color: white;
         text-shadow: 0 0 .2em black;
@@ -36,11 +39,12 @@
         filter:brightness(1.8);
 
     h1 {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
         margin-bottom: 0em;
         height: 3em;
+        font-size: 1em;
     }
     .more {
         cursor: pointer;
@@ -64,6 +68,12 @@
         }
     }
     }
-
+}
+    // VARIANTS
+    &.logoOnly {
+        .content {
+            display: none;
+        } 
+    }
 
 }

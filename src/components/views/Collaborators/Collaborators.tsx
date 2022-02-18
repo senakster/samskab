@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Collaborators.module.scss';
 import CollabCard from './CollabCard';
-import { collaborators } from './collabData';
+import { collaborators } from '_data/collabData';
 import { Trans, useTranslation } from 'react-i18next';
 
 
@@ -90,3 +90,4 @@ const Mention: React.FC<{name: string, description: string, url: string, variant
     </div>
   )
 }
+

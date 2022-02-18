@@ -1,0 +1,68 @@
+@import "/src/_style/include-media.scss";
+.Navigation {
+    nav {
+        ul {
+            list-style-type: none;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;    
+            gap: 10px;
+            li.link {
+                font-size: calc(.5em + max(1.4vw,1.4vh) * .5);
+                // transition: color 300ms, text-shadow 300ms; 
+                &.active {
+                    a {
+                        text-shadow: 0 0 1em var(--secondary-dark-color);
+                        color: var(--primary-color);
+                        font-weight: bold;
+                        // -webkit-text-fill-color: var(--primary-color);
+                        // -webkit-text-stroke: 1px var(--text-color);
+                    }
+                    // text-shadow: 0 0 .1em var(--background-color);
+                }
+            }
+        }
+    }
+    &.modal {
+    opacity: 0.96 !important; //hack to counter header scrolled fix-container div:first line ~ 68
+    visibility: visible !important; //hack to counter header media query line ~ 98
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important; 
+    z-index: 2;
+    animation: fade-in 400ms forwards;
+     nav {
+         margin: auto;
+         height: 100%;
+         font-size: 150%;
+         ul {
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             li.link {
+                 font-size: 1em;
+             }
+         }
+     }
+    }
+}
+
+@keyframes fade-in {
+    from {
+        left: 100%;
+        opacity: 0;
+    } to {
+        left: 0;
+        opacity: .96;
+    }
+}

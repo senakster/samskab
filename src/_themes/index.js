@@ -5,7 +5,7 @@
 
 // import React from 'react'
 import { createGlobalStyle  } from 'styled-components'
-import vividTheme from './theme.vivid'
+import samskabTheme from './theme.samskab'
 import paleTheme from './theme.pale'
 import nightTheme from './theme.night'
 import darkTheme from './theme.dark'
@@ -18,12 +18,17 @@ function t(c) {
     body: c.bgColor,
     text: c.textColor,
     toggleBorder: c.primaryDarkColor,
-    primaryGradient: `linear-gradient(45deg, ${c.primaryColor}, ${c.secondaryDarkColor})`,
-    secondaryGradient: `linear-gradient(45deg, ${c.secondaryColor}, ${c.primaryDarkColor})`,
+    // primaryGradient: `linear-gradient(45deg, ${c.primaryColor}, ${c.primaryDarkColor})`,
+    // primaryGradient: `linear-gradient(45deg, ${c.primaryColor}, ${c.primaryContrastColor})`,
+    primaryGradient: `linear-gradient(45deg, ${c.secondaryColor}, ${c.secondaryDarkColor})`,
+    secondaryGradient: `linear-gradient(45deg, ${c.secondaryColor}, ${c.secondaryContrastColor})`,
     primaryColor: c.primaryColor,
-    secondaryColor: c.secondaryColor,
     primaryDarkColor: c.primaryDarkColor,
+    primaryContrastColor: c.primaryContrastColor || 'red',
+    secondaryColor: c.secondaryColor,
     secondaryDarkColor: c.secondaryDarkColor,
+    secondaryContrastColor: c.secondaryDarkColor || 'green',
+
   }
 }
 
@@ -34,8 +39,8 @@ const participantsColors = {
   on: '#a8c350'
 }
 export const themes = [
-  {id: 0, name: 'dark', theme: t(darkTheme) },
-  {id: 1, name: 'vivid', theme: t(vividTheme) },
+  { id: 0, name: 'samskab', theme: t(samskabTheme) },
+  {id: 1, name: 'dark', theme: t(darkTheme) },
   { id: 2, name: 'night', theme: t(nightTheme) },
   { id: 3, name: 'pale', theme: t(paleTheme) },
   { id: 4, name: 'gnf', theme: t(gnfTheme) },
@@ -69,7 +74,10 @@ export const GlobalStyles = createGlobalStyle`
     --primary-color: ${({ theme }) => theme?.primaryColor ? theme.primaryColor : 'darkgrey'};
     --secondary-color: ${({ theme }) => theme?.secondaryColor ? theme.secondaryColor : 'white'};
     --primary-dark-color: ${({ theme }) => theme?.primaryDarkColor || 'black'};
+    --primary-contrast-color: ${({ theme }) => theme?.primaryContrastColor ? theme?.primaryContrastColor : 'white'};
     --secondary-dark-color: ${({ theme }) => theme?.secondaryDarkColor || 'grey'};
+    --seconmary-contrast-color: ${({ theme }) => theme?.secondaryContrastColor ? theme?.secondaryContrastColor : 'white'};
+    
     --primary-gradient: ${({ theme }) => theme?.primaryGradient || 'linear-gradient(45deg,black,white)'};
     --secondary-gradient: ${({ theme }) => theme?.secondaryGradient || 'linear-gradient(45deg,white,black)'};
     --color-ku: ${participantsColors.ku};

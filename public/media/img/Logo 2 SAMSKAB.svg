@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 873.39 352.87">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 136.64px;
+        font-family: Montserrat-Medium, Montserrat;
+        font-weight: 500;
+      }
+
+      .cls-1,
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        letter-spacing: -0.03em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1"><text class="cls-1" transform="translate(0 316.93)">SAMSKAB</text>
+      <polygon class="cls-3"
+        points="738.23 316.93 724.23 316.93 724.23 196.81 644.47 117.05 566.3 195.22 556.4 185.32 644.47 97.25 738.23 191.01 738.23 316.93" />
+      <polygon class="cls-3" points="741.65 63.2 741.62 63.17 741.59 63.2 741.65 63.2" />
+      <path class="cls-3" d="M863.52,135.44,744.36,254.61v55.55l129-129A129.06,129.06,0,0,0,863.52,135.44Z" />
+      <path class="cls-3" d="M744.36,191.19v55.57L861.11,130a128.33,128.33,0,0,0-22.53-33Z" />
+      <polygon class="cls-3" points="744.36 127.78 744.36 183.33 834.7 92.99 806.92 65.22 744.36 127.78" />
+      <path class="cls-3"
+        d="M835.79,276.27A128.39,128.39,0,0,0,873.39,189L745.46,316.92a127.93,127.93,0,0,0,87.35-37.67Z" />
+      <polygon class="cls-3" points="738.8 127.76 676.38 65.33 648.6 93.11 738.8 183.33 738.8 127.76" />
+      <rect class="cls-3" x="720.65" y="8.72" width="42" height="41.83"
+        transform="translate(196.27 533.11) rotate(-45)" />
+      <polygon class="cls-3" points="680.3 61.41 738.8 119.9 738.8 64.34 708.09 33.63 680.3 61.41" />
+      <polygon class="cls-3" points="744.36 64.36 744.36 119.92 803 61.29 775.21 33.51 744.36 64.36" />
+    </g>
+  </g>
+</svg>

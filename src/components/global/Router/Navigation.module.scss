@@ -1,6 +1,7 @@
 @import "/src/_style/include-media.scss";
+@import "src/_style/animations.scss";
+
 .Navigation {
-    nav {
         ul {
             list-style-type: none;
             margin-block-start: 0;
@@ -11,43 +12,57 @@
             height: 100%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: baseline;
+            justify-content: center;
             align-items: baseline;    
             gap: 10px;
             li.link {
-                font-size: calc(.5em + max(1.4vw,1.4vh));
-                // transition: color 300ms, text-shadow 300ms; 
+                font-size: calc(.5em + max(1.4vw,1.4vh) * .5);
                 &.active {
                     a {
-                        color: var(--primary-color);
+                        // text-shadow: 0 0 1em var(--secondary-dark-color);
+                        color: var(--primary-contrast-color);
                         font-weight: bold;
-                        // -webkit-text-fill-color: var(--primary-color);
-                        // -webkit-text-stroke: 1px var(--text-color);
                     }
-                    // text-shadow: 0 0 .1em var(--background-color);
                 }
             }
         }
-    }
-    &.modal {
+}
+
+
+
+.Modal {
     opacity: 0.96 !important; //hack to counter header scrolled fix-container div:first line ~ 68
     visibility: visible !important; //hack to counter header media query line ~ 98
     background-color: var(--background-color);
     position: fixed;
     top: 0;
-    left: 0;
+    right: -100%;
     width: 100%;
     height: 100% !important; 
     z-index: 2;
-     nav {
-         margin: auto;
-         height: 100%;
-         font-size: 150%;
+        box-shadow: 0 0 0em;
+
+    transition: right 400ms, box-shadow 400ms;
+    &.active{
+        right: 0%;
+        box-shadow: 0 0 3em;
+    }
          ul {
+             list-style-type: none;
+             height: 100%;
+             display: flex;
              flex-direction: column;
              align-items: center;
              justify-content: center;
+             gap: 15px;
+             li.link {
+                 font-size: 1em;
+                                 &.active {
+                    a {
+                        color: var(--primary-contrast-color);
+                        font-weight: bold;
+                    }
+                }
+             }
          }
-     }
     }
-}

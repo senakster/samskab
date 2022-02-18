@@ -5,7 +5,7 @@ import ff from '_fonts'
 import { capitalize } from '_helpers'
 // import { ActionType, useStateContext } from '_state';
 
-const Themes: React.FC<any> = ({ variant, theme, font, handlers }) => {
+const Themes: React.FC<any> = ({ variant, theme, font, headerFont, handlers }) => {
   const [cbCollapse, setCb] = React.useState(false);
   return (
     <div className={styles.Themes}>
@@ -31,6 +31,15 @@ const Themes: React.FC<any> = ({ variant, theme, font, handlers }) => {
                {f}
             </option>
           )}
+
+      </select>
+      <select onChange={handlers.handleHeaderFontChange}
+        value={headerFont}>
+        {ff.map((f, i) =>
+          <option key={i} value={f} style={{ fontFamily: f }}>
+            {f}
+          </option>
+        )}
 
       </select>
       {variant !== 'minimal' && <ColorBox cbCollapse={cbCollapse} setCb={setCb} />}
