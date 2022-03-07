@@ -74,7 +74,7 @@ const nb_logo = {
 }
 const bb_logo = {
     id: `bb_logo`,
-    url: `https://static.wixstatic.com/media/9222e2_bbdcb5ef1e6540fdb438470bb3de7613~mv2.png/v1/fill/w_1290,h_840,al_c,q_100/Baerebo%20logo%20close%20cut%20large.webp`
+    url: `${process.env.PUBLIC_URL}/media/img/Baerebo logo close cut stor.png`
 }
 const on_logo = {
     id: `on_logo`,

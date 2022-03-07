@@ -107,26 +107,26 @@ export const results: { wp: string, list: TResult[] }[] = [
                 display: false,
             }, {
                 id: 'wp3-r2',
-                title: 'fokusgruppediskussioner',
+                title: 'Fokusgruppediskussioner',
                 description: '3+ fokusgruppediskussioner med udvalgte grupper af medlemme',
                 status: 'afventer',
                 display: false,
             }, {
                 id: 'wp3-r3',
-                title: 'CO2-beregner',
-                description: 'Udviklet CO2-beregner til nabofællesskaber og boligaktører.',
+                title: 'CO²-beregner',
+                description: 'Udvikling af CO²-beregner til nabofællesskaber og boligaktører.',
                 status: 'igangsat',
                 display: true,
             }, {
                 id: 'wp3-r4',
                 title: 'Spørgeskema',
-                description: 'Spørgeskema om CO2-aftryk med randomiseret stikprøve af 1000+ danskere.',
+                description: 'Spørgeskema om CO²-aftryk med randomiseret stikprøve af 1000+ danskere.',
                 status: 'afventer',
                 display: false,
             }, {
                 id: 'wp3-r5',
                 title: 'Spørgeundersøgelse',
-                description: 'Spørgeundersøgelse om CO2-aftryk hos deltagere i grønne nabofællesskaber.',
+                description: 'Spørgeundersøgelse om CO²-aftryk hos deltagere i grønne nabofællesskaber.',
                 status: 'afventer',
                 display: false,
             }, {
@@ -148,7 +148,7 @@ export const results: { wp: string, list: TResult[] }[] = [
                 display: false,
             }, {
                 id: 'wp4-r2',
-                title: 'Følge af udvikling',
+                title: 'Følge udvikling',
                 description: 'Følge udviklingen i omkring 100 grønne nabofællesskaber.',
                 status: 'afventer',
                 display: false,
@@ -241,7 +241,7 @@ export const results: { wp: string, list: TResult[] }[] = [
             {
                 id: 'wp5-r10',
                 title: 'Podcastserie',
-                description: 'Podcastserien ‘fra Grå til Grøn’ (4 afsnit).',
+                description: "Podcastserien 'fra Grå til Grøn' (4 afsnit).",
                 status: 'afventer',
                 display: true,
             },

@@ -4,9 +4,152 @@
     "opsummering": "summary",
     "Publikationer": "publications",
     "Andre Resultater": "Other Results",
+    "afventer": "pending",
+    "igangsat": "in progress",
+    "opfyldt": "met",
+    "udskudt": "delayed",
+    "Beskrivelse": "Description",
+    "Status": "Status",
     "pw0-1": {
-        "title": "Project desription", 
+        "title": "Project desription",
         "name": "Project 40322: SAMSKAB - FROM GRAY HOUSING ASSOCIATIONS TO GREEN NEIGHBORHOOD COMMUNITIES (in danish)",
-        "summary":"The project challenges the notion that the green transition takes place primarily through individual behavior and technological change by pointing out that it can take place just as much as a fundamental social change involving neighboring communities. The project contributes knowledge and tools that can support the establishment of completely new green neighborhood communities as well as the transition from gray housing associations to green neighborhood communities and thereby strengthen the green transition. Gray housing associations are referred to here as housing associations that do not have a direct focus on the environment, climate and sustainability, while green neighboring communities are defined as green, where their members share the desire to live more sustainably and act together on this desire."
-        }
+        "summary": "The project challenges the notion that the green transition takes place primarily through individual behavior and technological change by pointing out that it can take place just as much as a fundamental social change involving neighboring communities. The project contributes knowledge and tools that can support the establishment of completely new green neighborhood communities as well as the transition from gray housing associations to green neighborhood communities and thereby strengthen the green transition. Gray housing associations are referred to here as housing associations that do not have a direct focus on the environment, climate and sustainability, while green neighboring communities are defined as green, where their members share the desire to live more sustainably and act together on this desire."
+    },
+    "wp1-r1": {
+        "title": "Catalog of Ideas",
+        "description": "Best-practice idea catalog, which gathers experiences from 10 established and well-functioning green neighboring communities, housing associations and eco-communities, in collaboration with Bofaellerskap.dk which runs a knowledge bank on the subject."
+    },
+    "wp1-r2": {
+        "title": "Training Course",
+        "description": "Creates competencies and knowledge in green enthusiasts, so that they are equipped to start the building of green neighboring communities. This is done in collaboration with DeltagerDanmark and their Green Academy."
+    },
+    "wp1-r3": {
+        "title": "Mentoring",
+        "description": "Mentoring course where enthusiasts from existing green neighborhood communities are connected to a new neighborhood community to inspire, help and support the establishment."
+    },
+    "wp1-r4": {
+        "title": "Behavioral Challenges",
+        "description": "Behavioral challenges about concrete resident-driven activities that motivate residents to green changes in everyday life."
+    },
+    "wp2-r1": {
+        "title": "Evaluation",
+        "description": "Evaluation that documents how the above tools work in practice with recommendations for improvements and optimization thereof."
+    },
+    "wp2-r2": {
+        "title": "Interviews",
+        "description": "Min. 20+ semi-structured interviews of key players."
+    },
+    "wp2-r3": {
+        "title": "Focus Groups",
+        "description": "Min. 3 focus groups with community or board members."
+    },
+    "wp2-r4": {
+        "title": "Analysis",
+        "description": "Analysis of relevant internal documents, strategies, articles of association and reports."
+    },
+    "wp2-r5": {
+        "title": "Course",
+        "description": "To assist municipal staff in the development of their action plans to strengthen community and sustainability."
+    },
+    "wp2-r6": {
+        "title": "Course",
+        "description": "To build competencies among both employees in housing associations as well as board members / representatives in housing associations (both share, owner and tenant)."
+    },
+    "wp2-r7": {
+        "title": "Catalog of Ideas",
+        "description": "Gathers experiences from 10 established and functioning green neighborhood communities. Targeted at employees in municipalities and housing associations."
+    },
+    "wp3-r1": {
+        "title": "Semi-structured Interviews",
+        "description": "30 + semi-structured interviews of key actors and participants."
+    },
+    "wp3-r2": {
+        "title": "Focus Group Discussions",
+        "description": "3+ focus group discussions with selected groups of members"
+    },
+    "wp3-r3": {
+        "title": "CO² calculator",
+        "description": "Development of CO² calculator for neighboring communities and housing actors."
+    },
+    "wp3-r4": {
+        "title": "Questionnaire",
+        "description": "Questionnaire about CO² imprints with randomized sample of 1000+ Danes."
+    },
+    "wp3-r5": {
+        "title": "Survey",
+        "description": "Survey of CO² imprints among participants in green neighboring communities."
+    },
+    "wp3-r6": {
+        "title": "Analysis Report",
+        "description": "Analysis report on the environmental and social impact of green neighboring communities"
+    },
+    "wp4-r1": {
+        "title": "Tools",
+        "description": "eg training courses, are offered through partners to relevant employees."
+    },
+    "wp4-r2": {
+        "title": "Following of development",
+        "description": "Follow developments in about 100 green neighborhoods."
+    },
+    "wp4-r3": {
+        "title": "Survey",
+        "description": "Institutional survey on the organization of green neighborhoods."
+    },
+    "wp4-r4": {
+        "title": "Interviews",
+        "description": "20 + interviews with key players in selected new green neighborhoods."
+    },
+    "wp4-r5": {
+        "title": "Report",
+        "description": "Report on upscaling of green neighboring communities at national level and recommendations"
+    },
+    "wp5-r1": {
+        "title": "Project meetings",
+        "description": "10 project meetings per year, where core partners exchange research results."
+    },
+    "wp5-r2": {
+        "title": "Solution Labs",
+        "description": "8 solution labs, where the researchers' results are presented to collaborators and other stakeholders. All collaborators are involved in all solution labs."
+    },
+    "wp5-r3": {
+        "title": "Academic Articles",
+        "description": "Publishing min. 6 academic articles in international journals"
+    },
+    "wp5-r4": {
+        "title": "Conference participation",
+        "description": "Participation in min. 3 international conferences."
+    },
+    "wp5-r5": {
+        "title": "International seminar",
+        "description": "Holding of 1 international seminar on the collective part of environmental behavior."
+    },
+    "wp5-r6": {
+        "title": "Ph.D. thesis",
+        "description": "Ph.D. thesis - University of Copenhagen."
+    },
+    "wp5-r7": {
+        "title": "Ongoing dissemination",
+        "description": "Publication and ongoing dissemination of idea catalogs, guidance manuals, training courses, courses, webinars and reports produced in WP 1-4."
+    },
+    "wp5-r8": {
+        "title": "Website",
+        "description": "Website with all catalogs, manuals and reports published in the project."
+    },
+    "wp5-r9": {
+        "title": "Op-Eds",
+        "description": "Min. 4 Op-Eds in daily news papers."
+    },
+    "wp5-r10": {
+        "title": "Podcast Series",
+        "description": "Podcast series 'from Gray to Green' (4 episodes)."
+    },
+    "wp5-r11": {
+        "title": "Articles",
+        "description": "Articles in stakeholder media channels (member letters, newsletters, etc.)."
+    },
+    "wp5-r12": {
+        "title": "Meetings",
+        "description": "Meetings of the Advisory Panel (minimum two meetings per year)."
     }
+
+}

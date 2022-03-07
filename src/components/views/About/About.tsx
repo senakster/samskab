@@ -15,7 +15,7 @@ const About: React.FC = () => {
         <Hero height={55} img={`${process.env.PUBLIC_URL}/media/img/grå_bygning.jpg`}>
           <h2>
             <Trans ns={`about`} i18nKey={`title`}>
-              Fra grå boligforeninger til grøne nabofællesskaber
+              Fra <span style={{ color: '#bbbbbb' }}>grå</span> boligforeninger til <span style={{ color:'#66B760'}}>grønne</span> nabofællesskaber
             </Trans>
           </h2>
           <p>

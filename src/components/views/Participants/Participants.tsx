@@ -12,11 +12,16 @@ const Participants: React.FC = () => {
     <div className={styles.Participants} data-testid="Participants">
       <div className={styles.peopleList}>
         <ContactCard data={people.find(p => p.id === 'KU01')!} />
-        <ContactCard data={people.find(p => p.id === 'ON01')!} />
-        <ContactCard data={people.find(p => p.id === 'ON02')!} />
+        <ContactCard data={people.find(p => p.id === 'KU03')!} />
+        <ContactCard data={people.find(p => p.id === 'KU02')!} />
+        <ContactCard data={people.find(p => p.id === 'KU04')!} />
+          <ContactCard data={people.find(p => p.id === 'BB01')!} />
+          <ContactCard data={people.find(p => p.id === 'BB02')!} />
         <ContactCard data={people.find(p => p.id === 'NB01')!} />
         <ContactCard data={people.find(p => p.id === 'NB02')!} />
-          <ContactCard data={people.find(p => p.id === 'WEB01')!} />
+          <ContactCard data={people.find(p => p.id === 'ON01')!} />
+          <ContactCard data={people.find(p => p.id === 'ON02')!} />
+        <ContactCard data={people.find(p => p.id === 'WEB01')!} />
 
       </div>
     </div>

@@ -1,6 +1,6 @@
 @import 'src/_style/animations.scss';
 
-$size: 250px;
+$size: 270px;
 .ContactCard {
     animation: fade-in calc(var(--delay)*2.5ms) calc(var(--delay)*0ms) forwards;
     opacity: 0;

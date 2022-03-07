@@ -58,12 +58,15 @@ const Timeline: React.FC = () => {
             </li>
           )}
           </ul>
-          <div>
-            {open && <WorkPackageBox data={workPackages.find(w => w.id === open) || workPackages[0]} active={open} openWP={setOpen} />}
+          <div className={styles.WPViewport}>
+            <div className={styles.WPContainer} style={{ '--index': workPackages.findIndex((w) => w.id === open)} as React.CSSProperties }>
+              {workPackages.map(w =>
+                <WorkPackageBox key={w.id} data={w} active={open} openWP={setOpen} />
+              )}
+            </div>
           </div>
       </div>
       </div>
-      {/* <Results /> */}
   </>
 );
 }

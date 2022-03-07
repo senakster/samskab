@@ -112,7 +112,7 @@ const Results: React.FC = () => {
                     {/* <h3 id={wp} className="__anchor"><HashLink to={`/timeline#${wp}`}>{workPackages.find(w => w.id === wp)?.name}</HashLink></h3> */}
                     <h3 id={wp} className={`__anchor ${styles.wpHeader} ${styles.flexHeader}`}>
                       <TextIcon label={workPackages.find(w => w.id === wp)!.id} classes={['small']} variant="circle" color="#9ab9cb" />
-                      <span>{workPackages.find(w => w.id === wp)?.name}</span>
+                      <span>{t(workPackages.find(w => w.id === wp)!.name, {ns: 'timeline'})}</span>
                     </h3>
                     <ul className={styles.liList}>
                       {results.find(r => r.wp === wp)?.list

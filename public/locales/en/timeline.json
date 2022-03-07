@@ -14,19 +14,39 @@
     "wp": {
         "title": "Work Packages",
         "wp1": {
-            "name": "Work Package 1: Motivation and viability"
+            "name": "Work Package 1: Motivation and viability",
+            "description": {
+                "p0": "The practice goal is to develop tools targeted at residents and enthusiasts (bottom-up) to assist partly the establishment of new green neighborhood communities as well as the transformation of existing gray housing associations. The research goal is to study the factors that motivate or block the process, as well as understand what works and why in both the creation, transformation and maintenance of green neighboring communities.",
+                "p1": "In Phase A, this WP will create new knowledge about how green neighboring communities are created, what works in the communities that have been created and how they remain viable. It will focus on motivation, viability and the social processes and barriers associated with creating and maintaining green neighborhoods. The project's associated Ph.D. students focus primarily on the core case in Tingbjerg, which is expected to be the most challenging."
+            }
         },
         "wp2": {
-            "name": "Work Package 2 - Organizational Barriers"
+            "name": "Work Package 2 - Organizational Barriers",
+            "description": {
+                "p0": "The practice goal is to develop and test targeted tools that will assist special employees in municipalities and housing organizations in strengthening the establishment, transformation and maintenance of green neighboring communities",
+                "p1": "The research goal is to study the organizational barriers in the establishment of green neighborhood communities as well as the synergy between neighborhood communities, municipalities and housing organizations."
+            }
         },
         "wp3": {
-            "name": "Work Package 3 - Environmental and Social Impact"
+            "name": "Work Package 3 - Environmental and Social Impact",
+            "description": {
+                "p0": "The aim is to document the spill-over effect in the local area on both the environment (climate footprint) and the social field (loneliness, security, integration).",
+                "p1": "Method & execution: The evaluation of environment and social impact is studied in the 3 core cases in the residential areas Tingbjerg, Vinge and Hvalsø with participant observation in everyday interactions and organizational meetings. In addition, semi-structured interviews and focus group discussions are conducted with key actors and participants in neighboring communities. Other relevant pilot projects (secondary cases) will also be involved, which will be studied through short-term field visits and semi-structured interviews with key actors.",
+                "p2": "A CO² calculator is being developed that can motivate both individual and joint reduction of consumption. SAMSKAB will use the CO² meter as developed in COMPASS, but with new figures from AAU under the auspices of 70i30. It will allow the calculation of an average footprint in the green neighboring communities."
+            }
         },
         "wp4": {
-            "name": "Work Package 4 - Upscaling"
+            "name": "Work Package 4 - Upscaling",
+            "description": {
+                "p0": "WP4 follows the creation of around 100 green neighboring communities - both newly established and transformed - through SAMSKAB's partners (municipalities and housing organizations) and DeltagerDanmark in 70i30. The aim is to understand how upscaling of green neighborhoods takes place and can be strengthened.",
+                "p1": "The developed and tested tools in phases A and B become widespread after 3 years in municipalities and with housing actors. An institutional survey targeted at representatives of green neighborhood communities focuses on green neighborhood communities' sources of inspiration, activities, organization, viability, interaction with municipalities and housing associations, to uncover the conditions that underlie their spread, success and upscaling. In addition, semi-structured interviews are conducted with key players in selected new green neighborhood communities. The study is continuously coordinated with the work that DeltagerDanmark creates in the 70i30 project, where they will engage 100,000 Danes around the green transition."
+            }
         },
         "wp5": {
-            "name": "Work Package 5 - Communication"
+            "name": "Work Package 5 - Dissemination and Communication",
+            "description": {
+                "p0": "The purpose is to ensure the organization of research and dissemination activities, publication of results and ongoing dissemination to partners and green communities."
+            }
         }
     },
     "pagetitle": "SAMSKAB is structured into 3 Phases and 5 Work Packages",
@@ -34,7 +54,7 @@
     "Work Package 2 - Organisatoriske barrierer": "Work Package 2 - Organizational Barriers",
     "Work Package 3 - Miljø og social impact": "Work Package 3 - Environmental and Social Impact",
     "Work Package 4 - Opskalering": "Work Package 4 - Upscaling",
-    "Work Package 5 - Formidling og kommunikation": "Work Package 5 - Communication",
+    "Work Package 5 - Formidling og kommunikation": "Work Package 5 - Dissemination and Communication",
     "Udvikling og design af redskaber": "Tool Development and Design",
     "Afprøvning og justering af redskaber": "Tool Testing and Adjustment",
     "Opskalering af redskaber": "Upscaling of Tools"
