@@ -2,15 +2,15 @@ import React from 'react';
 import styles from './ImageCarousel.module.scss';
 
 const ImageCarousel: React.FC<{
-  images?: {id: string;url: string;}[],
+  images: {id: string;url: string;}[],
   interval?: number;
   variant?: string;
 }> = ({images, interval, variant}) => {
 
-  const [active, setActive] = React.useState<number>(0)
+  const [active, setActive] = React.useState<number>(Math.floor(Math.random() * images.length))
   
   function auto_rotate() {
-    const newVal = images && active < images?.length - 2 ? active + 1 : 0;
+    const newVal = (active + images.length + Math.floor(Math.random()*images.length)) % images.length || 0 
     setActive(newVal)
   }
   React.useEffect(() => {
@@ -27,7 +27,7 @@ const ImageCarousel: React.FC<{
   style={{'--interval': interval} as React.CSSProperties}
   data-testid="ImageCarousel">
     {images?.map && images.map((img, i) => 
-      <img key={i} className={`${i === active ? styles.active: ''}`} src={`${img.url.replace('%PUBLIC_URL%',`${process.env.PUBLIC_URL}`)}`} alt={img.id}/>
+      <img key={i} className={`${i === active ? styles.active: ''}`} src={`${img.url.replace('%PUBLIC_URL%',`${process.env.PUBLIC_URL}`)}`} alt={img.id} loading="lazy"/>
     )}
   </div>
   </>

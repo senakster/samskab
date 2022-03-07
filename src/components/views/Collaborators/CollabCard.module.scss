@@ -1,11 +1,15 @@
 .CollabCard {
+    position: relative;
     min-width: min(290px, 100%);
     max-width: min(500px, 50%);
-    background-color: var(--brandColor);
+    // background-color: var(--brandColor);
+    background: linear-gradient(45deg, var(--brandColor),var(--brandColor) 70%, var(--background-color));
     // color: #fff;
     display: inline-block;
     overflow: auto;
     padding: 10px;
+    border: 1px solid rgba(127,127,127,.2); 
+    border-radius: 4px;
     .imgContainer {
         height: 200px;
         background: white;
@@ -23,11 +27,11 @@
     }
     &.default {
 
-    box-shadow: 0 0 1em rgba(0,0,0,.5);
-    border-radius: 10px;
+    // box-shadow: 0 0 1em rgba(0,0,0,.5);
+    border-radius: 4px;
     transition: box-shadow 300ms;
     &:hover {
-        box-shadow: 0 0 3em rgba(255,255,255,.5);
+        // box-shadow: 0 0 3em rgba(255,255,255,.5);
     }
     .content {
         color: white;
@@ -41,7 +45,7 @@
     h1 {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-end;
+        align-items: center;
         margin-bottom: 0em;
         height: 3em;
         font-size: 1em;

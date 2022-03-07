@@ -8,7 +8,6 @@ const Button: React.FC<any> = (props) => {
     <button
       {...props}
       className={`${styles.Button} ${styles[props.variant]} ${classNames}`}
-      aria-pressed="false"
       data-testid="Buttontest">
       {props.label}
     </button>

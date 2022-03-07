@@ -52,17 +52,17 @@ const forskningssamarbejdspartnere: TCollabor[] = [
     },
     {
         id: 'susy', name: 'Centre for Sustainability and Society (SUSY) - KU', logo: images.find(i => i.id === 'ku_logo'), color: "#901a1e", href: "https://susy.ku.dk/",
-        description: "Centre for Sustainability and Society (SUSY) is focusing on research and education in climate and sustainability.",
+        description: "Centre for Sustainability and Society (SUSY) har fokus på forskning og uddannelse i klima og bæredygtighed.",
     },
     {
         id: 'scc', name: 'Sustainability Science Centre - KU', logo: images.find(i => i.id === 'ku_logo'), color: "#901a1e", href: "https://sustainability.ku.dk/",
-        description: "The purpose of the Sustainability Science Centre is to catalyse, facilitate and coordinate research and educational initiatives at the University of Copenhagen in order to address issues relevant to the sustainable development of society.",
+        description: "Formålet med Sustainability Science Center er at katalysere, facilitere og koordinere forsknings- og uddannelsesinitiativer på Københavns Universitet med henblik på at adressere problemstillinger, der er relevante for en bæredygtig samfundsudvikling.",
     },
 ]
 
 const praksissamarbejdspartnere = {
     kommuner: [
-        { name: 'Københavns', description: 'Partner i projektet pga. Tingbjerg', url:'https://kk.dk/'},
+        { name: 'København', description: 'Partner i projektet pga. Tingbjerg', url:'https://kk.dk/'},
         { name: 'Lejre', description: 'Partner i projektet pga. Hvalsø', url: 'https://lejre.dk/'},
         { name: 'Frederikssund', description: 'Partner i projektet pga. Vinge-projektet', url: 'https://frederikssund.dk/' },
         { name: 'Køge', description: 'Deltager med at udbrede grønne nabofællesskaber', url: 'https://koege.dk/' },
@@ -101,4 +101,6 @@ export const collaborators = {
     praksissamarbejdspartnere,
     rådgivendepanel,
 }
+
+export default collaborators
 

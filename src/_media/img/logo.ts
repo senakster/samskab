@@ -12,9 +12,14 @@ const Logo1HvidSAMSKABtransparent = {
     url: `${process.env.PUBLIC_URL}/media/img/Logo 1 Hvid SAMSKAB transparent.png`
 }
 
+// const Logo2SAMSKAB = {
+//     id: `logo2`,
+//     url: `${process.env.PUBLIC_URL}/media/img/Logo 2 SAMSKAB.svg`
+    
+// }
 const Logo2SAMSKAB = {
     id: `logo2`,
-    url: `${process.env.PUBLIC_URL}/media/img/Logo 2 SAMSKAB.svg`
+    url: `${process.env.PUBLIC_URL}/media/img/Logo 2 SAMSKAB.png`
 }
 
 const logos = {

@@ -10,8 +10,8 @@
   }
     .burger-menu {
       position: fixed;
-      top: 0vh;
-      right: 2vw;
+      top: .2em;
+      right: .5em;
       // background-color: rgba(0,0,0,.1);
       width: calc($burger-size * .7);
       height: $burger-size;

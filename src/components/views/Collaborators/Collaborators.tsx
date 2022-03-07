@@ -10,7 +10,7 @@ const Collaborators: React.FC = () => {
   return (
     <>
       {/* KERNEPARTNERE */}
-      <h1 className="page_title">{t('collaborators')}</h1>
+      <h1 className="page_title">{t('Samarbejdspartnere')}</h1>
       <div className={styles.Collaborators} data-testid="Collaborators">
         <h2 className={styles.subHeading}>{t('Kernepartnere')}</h2>
         <div className={styles.category}>
@@ -20,7 +20,7 @@ const Collaborators: React.FC = () => {
         </div>
 
         {/* FORSKNING */}
-        <h2 className={styles.subHeading}>{t('forskningssamarbejdspartnere')}</h2>
+        <h2 className={styles.subHeading}>{t('Forskningssamarbejdspartnere')}</h2>
         <div className={styles.category}>
           {collaborators.forskningssamarbejdspartnere.map(c =>
             <CollabCard key={c.id} data={c} />
@@ -36,13 +36,13 @@ const Collaborators: React.FC = () => {
         </div>
 
         {/* PRAKSISPARTNERE */}
-        <h2 className={styles.subHeading}>{t('praksissamarbejdspartnere')}</h2>
+        <h2 className={styles.subHeading}>{t('Praksissamarbejdspartnere')}</h2>
         <div className={styles.category}>
           <div className={styles.subCatBox}>
           <h3>{t('Kommuner')}</h3>
           <ul>
           {collaborators.praksissamarbejdspartnere.kommuner.map(c =>
-            <li><Mention key={c.name} {...c} /></li>
+            <li key={c.name}><Mention {...c} /></li>
           )}
           </ul>
           </div>
@@ -50,15 +50,15 @@ const Collaborators: React.FC = () => {
             <h3>{t('Boligselskaber og -organisationer')}</h3>
             <ul>
               {collaborators.praksissamarbejdspartnere.boligorganisationer.map(c =>
-                <li><Mention key={c.name} {...c} /></li>
+                <li key={c.name}><Mention {...c} /></li>
               )}
             </ul>
           </div>
           <div className={styles.subCatBox}>
-            <h3>{t('Andre praksis-samarbejdspartnere')}</h3>
+            <h3>{t('Andre praksissamarbejdspartnere')}</h3>
             <ul>
               {collaborators.praksissamarbejdspartnere.andre.map(c =>
-                <li><Mention key={c.name} {...c} /></li>
+                <li key={c.name}><Mention {...c} /></li>
               )}
             </ul>
           </div>
@@ -66,7 +66,7 @@ const Collaborators: React.FC = () => {
 
         {/* RÅDGIVENDE PANEL */}
         <h2 className={styles.subHeading}>{t('Rådgivende panel')}</h2>
-        <div className={styles.category}>
+        <div className={`${styles.category} ${styles.advisoryBoard}`}>
           {collaborators.rådgivendepanel.map(c =>
             <Mention key={c.name} {...c} variant={`flex11`}/>
           )}
@@ -81,9 +81,9 @@ export default Collaborators;
 const Mention: React.FC<{name: string, description: string, url: string, variant?: string}> = ({name, description, url, variant}) => {
   return (
     <div className={`${styles.Mention} ${variant ? styles[variant] : ''}`}>
-      <a href={url || undefined} target="_blank" rel="noreferrer"><span className={`themed_title ${styles.mentionTitle}`}>{name}</span></a>
+      <a href={url || undefined} target="_blank" rel="noreferrer"><h4 className={`themed_title ${styles.mentionTitle}`}>{name}</h4></a>
       <p>
-        <Trans na="collaborators" i18nKey={`${name.replace('.','_')}`} >
+        <Trans ns="collaborators" i18nKey={`${name.replace('.','_')}`} >
         {description}
         </Trans>
       </p>

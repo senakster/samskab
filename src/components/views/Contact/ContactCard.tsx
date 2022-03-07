@@ -2,21 +2,21 @@ import React from 'react'
 import styles from './ContactCard.module.scss'
 import { TPeople } from '_data/peopleData'
 import { useTranslation } from 'react-i18next'
+import config from '_config'
 
 const ContactCard: React.FC<{ data: TPeople }> = ({ data }) => {
     const { t } = useTranslation('contact')
     return (
-        <div className={styles.ContactCard}>
-            <h3>{t(data.role || 'contact')}</h3>
+        <div className={styles.ContactCard} style={{'--delay': 400 + Math.ceil(Math.random()*1000)} as React.CSSProperties}>
+            <h3>{t(data.role || 'Deltager')}</h3>
+            {<img className={styles.peoplePicture} src={`${data.img ? data.img.url?.replace('__PUBLICURL__', config.public_static || '') : `${config.public_static}/media/img/Logo 1 Hvid Kvadrat SAMSKAB.png`}`} alt={t(data.name)} loading="lazy" />}
             <div className={styles.pData}>
-                {data.name && <label>{t('Navn')}: <span>{t(data.name)}</span></label>}
-                {data.email && <label>{t('Email')}: <span><a href={`mailto:${data.email}?subject=SAMSKAB`}>{t(data.email || '')}</a></span></label>}
-                {data.phone && <label>{t('Telefon')}: <span>{t(data.phone || '')}</span></label>}
-                {data.url && <label>{t('Link')}: <span><a href={data.url} target="_blank" rel="noreferrer">{data.url}</a></span></label>}
+                {<h3>{t(data.name)}</h3>}
+                {data.affiliations && data.affiliations.length > 0 && data.affiliations.map((a) => <i className={styles.affiliation} key={a}>{t(a)}</i>) }
+                {data.email && <span><a href={`mailto:${data.email}?subject=SAMSKAB`}>{t(data.email || '')}</a></span>}
+                {data.phone && <span>{t(data.phone || '')}</span>}
+                {data.url && <span><a href={data.url} target="_blank" rel="noreferrer">{data.url}</a></span>}
             </div>
         </div>)
 }
-// email: 'quentin.gausset@anthro.ku.dk',
-//     phone: '+45 51288550',
-//         url: 'https://antropologi.ku.dk/ansatte/professorer/?pure=da/persons/151879'
 export default ContactCard

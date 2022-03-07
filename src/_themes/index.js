@@ -3,7 +3,6 @@
 // global.js -> renamed _themes
 // Source: https://github.com/maximakymenko/react-day-night-toggle-app/blob/master/src/global.js#L23-L41
 
-// import React from 'react'
 import { createGlobalStyle  } from 'styled-components'
 import samskabTheme from './theme.samskab'
 import paleTheme from './theme.pale'
@@ -18,16 +17,16 @@ function t(c) {
     body: c.bgColor,
     text: c.textColor,
     toggleBorder: c.primaryDarkColor,
-    // primaryGradient: `linear-gradient(45deg, ${c.primaryColor}, ${c.primaryDarkColor})`,
-    // primaryGradient: `linear-gradient(45deg, ${c.primaryColor}, ${c.primaryContrastColor})`,
-    primaryGradient: `linear-gradient(45deg, ${c.secondaryColor}, ${c.secondaryDarkColor})`,
-    secondaryGradient: `linear-gradient(45deg, ${c.secondaryColor}, ${c.secondaryContrastColor})`,
+    primaryGradient: `linear-gradient(45deg, ${c.primaryColor}, ${c.primaryDarkColor})`,
+    primaryContrastGradient: `linear-gradient(45deg, ${c.primaryColor},${c.primaryDarkColor},${c.primaryContrastColor})`,
+    secondaryGradient: `linear-gradient(45deg, ${c.secondaryColor}, ${c.secondaryDarkColor})`,
+    secondaryContrastGradient: `linear-gradient(45deg, ${c.secondaryColor}, ${c.secondaryDarkColor},${c.secondaryContrastColor})`,
     primaryColor: c.primaryColor,
     primaryDarkColor: c.primaryDarkColor,
     primaryContrastColor: c.primaryContrastColor || 'red',
     secondaryColor: c.secondaryColor,
     secondaryDarkColor: c.secondaryDarkColor,
-    secondaryContrastColor: c.secondaryDarkColor || 'green',
+    secondaryContrastColor: c.secondaryContrastColor || 'green',
 
   }
 }
@@ -74,12 +73,13 @@ export const GlobalStyles = createGlobalStyle`
     --primary-color: ${({ theme }) => theme?.primaryColor ? theme.primaryColor : 'darkgrey'};
     --secondary-color: ${({ theme }) => theme?.secondaryColor ? theme.secondaryColor : 'white'};
     --primary-dark-color: ${({ theme }) => theme?.primaryDarkColor || 'black'};
-    --primary-contrast-color: ${({ theme }) => theme?.primaryContrastColor ? theme?.primaryContrastColor : 'white'};
+    --primary-contrast-color: ${({ theme }) => theme?.primaryContrastColor ? theme.primaryContrastColor : 'white'};
     --secondary-dark-color: ${({ theme }) => theme?.secondaryDarkColor || 'grey'};
-    --seconmary-contrast-color: ${({ theme }) => theme?.secondaryContrastColor ? theme?.secondaryContrastColor : 'white'};
-    
+    --secondary-contrast-color: ${({ theme }) => theme?.secondaryContrastColor ? theme.secondaryContrastColor : 'white'};
     --primary-gradient: ${({ theme }) => theme?.primaryGradient || 'linear-gradient(45deg,black,white)'};
     --secondary-gradient: ${({ theme }) => theme?.secondaryGradient || 'linear-gradient(45deg,white,black)'};
+    --primary-contrast-gradient: ${({ theme }) => theme?.primaryContrastGradient || 'linear-gradient(45deg,black,white)'};
+    --secondary-contrast-gradient: ${({ theme }) => theme?.secondaryContrastGradient || 'linear-gradient(45deg,white,black)'};
     --color-ku: ${participantsColors.ku};
     --color-bb: ${participantsColors.bb};
     --color-nb: ${participantsColors.nb};
@@ -92,7 +92,5 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme?.text};
     margin: 0;
     padding: 0;
-    // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    // font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: background 250ms ease-in, color 250ms linear;
   }`

@@ -1,8 +1,9 @@
 import React from 'react'
-import { TResult } from '_data/resultsData'
 import styles from './PublicationCard.module.scss'
 import { Trans, useTranslation } from 'react-i18next'
 import { TPublication } from '_data/publicationsData'
+import _data from '_data'
+import config from '_config'
 
 const PublicationCard: React.FC<{data: TPublication}> = ({data}) => {
     const {t} = useTranslation('results')
@@ -18,15 +19,18 @@ const PublicationCard: React.FC<{data: TPublication}> = ({data}) => {
             </h1>
             <div className={styles.meta}>
                 <div className={styles.cover}>
-                    <a href={data.url} target="_blank" rel="noreferrer"><img src={data.cover} alt={`${data.title} cover`} /></a>
+                    <a href={data.url.replace('__PUBLICURL__', config.public_static || '')} target="_blank" rel="noreferrer">
+                        <img src={data.cover.replace('__PUBLICURL__',config.public_static || '')} alt={`${data.title} cover`} />
+                    </a>
                 </div>
                 <div className={styles.name}>
                     <p>
                         <Trans ns="results" i18nKey={`${data.id}.name`}>{t(data.name)}</Trans>
                     </p>
                     {data.author && <p className={styles.authorList}><i>{data.author?.map(a => {
-                        const name = <span className={styles.author}>{a?.name}</span>
-                        return a?.email ? <a href={`mailto:${a?.email}`}>{name}</a> : name
+                        const name = typeof a === 'string' ? <span className={styles.author}>{_data.people.find(p => p.id === a)!.name}</span> : <span className={styles.author}>{a.name}</span>
+                        const author = typeof a === 'string' ? name : <a href={`mailto:${a.email}`}>{name}</a>                     
+                        return author
                     }
                     )}</i></p>}
                     <p className={styles.published}>{data.published?.year}{data.published?.month && `/${data.published.month}`}</p>

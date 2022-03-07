@@ -3,10 +3,13 @@
     padding-top: 40px;
     min-height: 20vh;
     background-color: var(--secondary-color);
+        background: linear-gradient(45deg, var(--secondary-color), var(--secondary-color) 80%, var(--background-color));
+
     .KernepartnerLogoer {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
         gap:2em;
         // background-color: var(--background-color);
         padding: 2em;

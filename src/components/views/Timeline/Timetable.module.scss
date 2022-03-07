@@ -1,0 +1,47 @@
+.Timetable {
+    table, tr, td {
+        border: 1px solid rgba(127,127,127,.2);
+    }
+    td {
+        background-color: rgba(127,127,127,1);
+        opacity: .2;
+        transition: opacity 300ms;
+    }
+    tbody {
+        tr {
+            cursor: pointer;
+
+        }
+        th {
+            color: var(--secondary-color);
+        }
+    }
+    tr.active {
+        th {
+            color: var(--background-color);
+            background-color: var(--text-color);
+        }
+        td:not(.empty) {
+            opacity: 1;
+        }
+    }
+    td.active {
+        &.wp1 { 
+            background-color: var(--primary-color);
+        }
+        &.wp2 {
+           background-color: var(--secondary-color);
+        }
+        &.wp3 {
+           background-color: var(--primary-dark-color);
+        }
+        &.wp4 {
+           background-color: var(--secondary-dark-color);
+        }
+        &.wp5 {
+           background-color: var(--primary-color);
+        }
+
+    }
+}
+

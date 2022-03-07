@@ -26,16 +26,16 @@ const CollabCard: React.FC<{data: TCollabor, variant?: string}> = ({data, varian
             <div className={styles.logo}>
                 <div className={styles.filter}></div>
                 <div className={styles.imgContainer}>
-                <img src={data.logo?.url.replace('%PUBLIC_URL%',`${process.env.PUBLIC_URL}`) || placeholder.logo!.url} alt={`${data.logo?.id}`} />
+                <img src={data.logo?.url.replace('%PUBLIC_URL%',`${process.env.PUBLIC_URL}`) || placeholder.logo!.url} alt={`${data.logo?.id}`} loading="lazy" />
                 </div>
             </div>
             <div className={styles.content}>
-                <h1 className={styles.name}>{data.name}</h1>
+                <h1 className={styles.name}>{t(data.name)}</h1>
                 <a href={data.href} rel="noreferrer" target="_blank"><span>{data.href}</span></a>
                 <p className={`${styles.more} ${active ? styles.active : ''}`}>{/*t('om')*/}</p>
                 <p className={`${styles.description} ${active ? styles.active : ''}`}>
                     <Trans ns="collaborators" i18nKey={`${data.id}`}>
-                    {data.description}
+                    {t(data.description)}
                     </Trans>
                 </p>
             </div>

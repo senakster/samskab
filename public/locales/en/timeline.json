@@ -1,16 +1,41 @@
 {
+    "Struktur": "Structure",
     "timeline": "timeline",
     "Faser": "Phases",
+    "FS": "PS",
     "Resultater": "Results",
     "Beskrivelse": "Description",
     "phases": {
-        "title": "Phases"
+        "title": "Phases",
+        "A": "Tool Development and Design",
+        "B": "Tool Testing and Adjustment",
+        "C": "Upscaling of Tools"
     },
-    "wp" : {
-        "title": "Work Packages (WP)",
+    "wp": {
+        "title": "Work Packages",
         "wp1": {
             "name": "Work Package 1: Motivation and viability"
+        },
+        "wp2": {
+            "name": "Work Package 2 - Organizational Barriers"
+        },
+        "wp3": {
+            "name": "Work Package 3 - Environmental and Social Impact"
+        },
+        "wp4": {
+            "name": "Work Package 4 - Upscaling"
+        },
+        "wp5": {
+            "name": "Work Package 5 - Communication"
         }
-    }
-
+    },
+    "pagetitle": "SAMSKAB is structured into 3 Phases and 5 Work Packages",
+    "Work Package 1 - Motivation og levedygtighed":"Work Package 1: Motivation and viability",
+    "Work Package 2 - Organisatoriske barrierer": "Work Package 2 - Organizational Barriers",
+    "Work Package 3 - Miljø og social impact": "Work Package 3 - Environmental and Social Impact",
+    "Work Package 4 - Opskalering": "Work Package 4 - Upscaling",
+    "Work Package 5 - Formidling og kommunikation": "Work Package 5 - Communication",
+    "Udvikling og design af redskaber": "Tool Development and Design",
+    "Afprøvning og justering af redskaber": "Tool Testing and Adjustment",
+    "Opskalering af redskaber": "Upscaling of Tools"
 }

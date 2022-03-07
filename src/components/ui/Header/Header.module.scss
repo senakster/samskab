@@ -1,7 +1,7 @@
 .Header {
     width: 100%;
     overflow: hidden;
-    padding-bottom: 40px;
+    // padding-bottom: 40px;
         .backgroundImage {
         position: absolute  ;
         top: 0;
@@ -35,6 +35,7 @@
 
 @media screen and (max-width: 660px) {
     .Header {
+        padding-bottom: 0px;
             .scrolled {
                 .fix_container {
                     h1 {

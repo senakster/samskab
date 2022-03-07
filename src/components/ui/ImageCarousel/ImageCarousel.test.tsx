@@ -5,7 +5,7 @@ import ImageCarousel from './ImageCarousel';
 
 describe('<ImageCarousel />', () => {
   test('it should mount', () => {
-    render(<ImageCarousel />);
+    render(<ImageCarousel images={[]} />);
     
     const imageCarousel = screen.getByTestId('ImageCarousel');
 

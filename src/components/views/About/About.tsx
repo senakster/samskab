@@ -3,25 +3,30 @@ import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import publications from '_data/publicationsData';
 import styles from './About.module.scss';
-
+import config from '_config';
+import Hero from 'components/ui/Hero/Hero';
+import { wallpapers } from '_media/img/images';
 const About: React.FC = () => {
   const {t} = useTranslation('about');
   return (
     <div className={styles.About} data-testid="About">
     <div className={styles.Home} data-testid="Home">
-      <h1 className="page_title">{'SAMSKAB'}</h1>
-      <div className={`${styles.flex_container} flex_container`}>
-        <div className={`${styles.flex_child70} flex_child70`}>
-          <h1>
+      <h1 className="page_title">{`${t('Om')} Samskab`}</h1>
+        <Hero height={55} img={`${process.env.PUBLIC_URL}/media/img/grå_bygning.jpg`}>
+          <h2>
             <Trans ns={`about`} i18nKey={`title`}>
               Fra grå boligforeninger til grøne nabofællesskaber
             </Trans>
-          </h1>
+          </h2>
           <p>
             <Trans ns={`about`} i18nKey={`subheader`}>
               Med støtte fra VELUX FONDEN skal ny forskning forankret på Institut for Antropologi afdække, hvordan man skaber grønne nabofællesskaber i boligforeninger, og hvilken effekt fællesskaberne har for den grønne omstilling og det sociale liv.
             </Trans>
           </p>
+      </Hero>
+
+      <div className={`${styles.flex_container} flex_container`}>
+        <div className={`${styles.flex_child70} flex_child70`}> 
           <h2>
             <Trans ns={`about`} i18nKey={`p1.header`}>
               Projektets formål
@@ -29,7 +34,8 @@ const About: React.FC = () => {
           </h2>
           <p><i>
             <Trans ns="about" i18nKey="project_description_link">
-              Læs hele projektbeskrivelsen her: <a href={publications.find(r => r.id === 'pw0-1')?.url} target="_blank" rel="noreferrer">Link</a>
+              <span>Læs hele projektbeskrivelsen her: </span>
+              <a href={publications.find(r => r.id === 'pw0-1')?.url.replace('__PUBLICURL__', config.public_static || '')} target="_blank" rel="noreferrer">Link</a>
             </Trans>
           </i></p>
           <p>
@@ -104,7 +110,7 @@ const About: React.FC = () => {
           </p>
           <p>
             <Trans ns={`about`} i18nKey={`p3.p5`}>
-              ”Vi vil bidrage til den grønne omstilling ved at knække koden bag skabelsen af levedygtige fællesskaber. Sammen med praktikere vil vi udvikle redskaber til at facilitere etableringen og opskaleringen af nye grønne nabofællesskaber i forskellige boligområder og boligtyper,” forklarer Quentin Gausset.
+                Vi vil bidrage til den grønne omstilling ved at knække koden bag skabelsen af levedygtige fællesskaber. Sammen med praktikere vil vi udvikle redskaber til at facilitere etableringen og opskaleringen af nye grønne nabofællesskaber i forskellige boligområder og boligtyper.
             </Trans>
           </p>
           <p>

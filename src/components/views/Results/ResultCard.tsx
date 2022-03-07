@@ -30,9 +30,9 @@ const ResultCard: React.FC<{data: TResult, focus?: boolean, nonfocus: boolean | 
             {/* ID */}
             <span className="offset-anchor" id={data.id}></span>
             {/* TITLE */}
-            <h3 className={styles.title}>
+            <h4 className={styles.title}>
                 <Trans ns="results" i18nKey={`${data.id}.title`}>{t(data.title)}</Trans>
-            </h3>
+            </h4>
             <div className={styles.collapse}>
                 {/* COVER */}
                 {data.cover &&

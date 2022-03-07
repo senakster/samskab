@@ -1,18 +1,49 @@
+@import 'src/_style/animations.scss';
+
+$size: 250px;
 .ContactCard {
-    width: 400px;
-    border: 1px solid rgba(127,127,127,.5);
-    padding: 5px;
+    animation: fade-in calc(var(--delay)*2.5ms) calc(var(--delay)*0ms) forwards;
+    opacity: 0;
+    width: min(100%, $size);
+    // border: 1px solid rgba(127,127,127,.5);
+    border: 1px solid rgba(127,127,127,.2);
+    border-radius: 4px;
+    padding: 15px;
+    word-break: break-all;
+    background-color: var(--background-color);
+    // background: radial-gradient(circle, var(--background-color),var(--background-color) 90%,  var(--primary-color));
     h3 {
         text-align: center;
+        word-break: break-word;
+        font-size: calc($size*.06);
+        margin-block-start: .5em;
+        margin-block-end: .5em;
     }
     .pData {
         display: flex;
+        font-size: calc($size*.06);
         flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+        padding: 10px;
         label {
             font-weight: bold;
             span {
                 font-weight: normal;
             }
         }
+        a {
+            text-decoration: none;
+        }
+    }
+    .peoplePicture {
+        width: 100%;
+        height: $size;
+        object-fit: cover;
+        object-position: top;
+    }
+    .affiliation {
+        text-align: center;
     }
 }

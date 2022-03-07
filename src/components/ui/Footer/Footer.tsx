@@ -5,6 +5,7 @@ import images from '_media/img/images';
 import CollabCard from 'components/views/Collaborators/CollabCard';
 import { collaborators } from '_data/collabData';
 import logos from '_media/img/logo';
+import config from '_config';
 
 
 const Footer: React.FC = ({children}) => {
@@ -15,12 +16,12 @@ const Footer: React.FC = ({children}) => {
         <img
           alt="main logo"
           style={{ display: 'inline-block', maxWidth: '100vw', maxHeight: '25vw' }}
-          src={logos.Logo2SAMSKAB.url}
+          src={logos.Logo2SAMSKAB.url.replace('__PUBLICURL__',config.public_static)}
         />
       </div>
     <KernepartnerLogoer />
     {children}
-    <LayoutToggle />
+    {/* <LayoutToggle /> */}
   </div>
 );
 }

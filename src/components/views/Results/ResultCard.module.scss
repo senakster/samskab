@@ -1,26 +1,33 @@
 .ResultCard {
     position: relative;
     max-width: 600px;
+    min-width: min(500px, 100%);
     padding: 10px;
-    border: 1px solid rgba(127,127,127,.25);
-    --border-radius: 0px;
+    border: 1px solid rgba(127,127,127,.2);
+    --border-radius: 4px;
     border-radius: var(--border-radius);
-    box-shadow: 0 0 2em var(--background-color);
+    // box-shadow: 0 0 2em var(--background-color);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    z-index: 1;
+        cursor: pointer;
+
     &.nonfocus:not(.active) {
         opacity: .3;
     }
     &.opfyldt{
         &::before {
         background-color: var(--primary-color);
+        background: linear-gradient(45deg, var(--primary-color), var(--primary-color), var(--background-color));
         opacity: 1;
         }
     }
     &.igangsat{
         &::before {
         background-color: var(--secondary-color);
+        background: linear-gradient(45deg, var(--secondary-color), var(--secondary-color), var(--background-color));
+
         opacity: .3;
         }
     }
@@ -33,9 +40,11 @@
     &.udskudt{
         &::before {
         background-color: red;
+        background: linear-gradient(45deg, var(--primary-contrast-color), var(--primary-contrast-color), var(--background-color));
         opacity: .5;
         }
     }
+
     .title {
         text-align: center;
         word-break: break-all;
@@ -47,7 +56,7 @@
     }
     .collapse {
         max-height: 0;
-        overflow: auto;
+        overflow: hidden auto;
         transition: max-height 300ms, border 300ms;
         > ul {
             display: flex;
@@ -69,16 +78,17 @@
                 align-items: baseline;
                 gap: 10px;
                 > *:first-child {
-                    flex: 0 0 90px;
+                    flex: 0 0 126px;
                 }
                 > *:nth-child(2) {
-                    flex: 1 0;
+                    flex: 1 1;
                 }
             }
         }
     }
     .title {
         // padding-bottom: 10px;
+        font-weight: bold;
         border-bottom: 0px solid rgba(127,127,127,0);
         transition: border-bottom 300ms, padding 300ms;
         cursor: pointer;
@@ -88,7 +98,7 @@
         &::before {
             // box-shadow: inset 0 0 1em var(--background-color);
             // background-color: var(--primary-color);
-            filter: invert(15%);
+            filter: invert(5%);
             opacity: 1;
         }
         .title{

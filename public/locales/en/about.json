@@ -1,7 +1,8 @@
 {
+    "Om": "About",
     "title": "From gray housing associations to green neighboring communities",
     "subheader": "With support from the VELUX FOUNDATION, new research anchored at the Department of Anthropology will uncover how to create green neighboring communities in housing associations, and what effect the communities have on the green transition and social life.",
-    "project_description_link": "Read the full project description here: <1>Link</1>",
+    "project_description_link": "Read the full project description here: <1>Link</1> (in danish)",
     "p1": {
         "header": "Purpose of the Project",
         "p1": "The project challenges the notion that the green transition takes place primarily through individual behavior and technological change by pointing out that it can take place just as much as a fundamental social change involving neighboring communities. The project contributes knowledge and tools that can support the establishment of completely new green neighborhood communities as well as the transition from gray housing associations to green neighborhood communities and thereby strengthen the green transition. Gray housing associations are referred to here as housing associations that do not have a direct focus on the environment, climate and sustainability, while green neighboring communities are defined as green, where their members share the desire to live more sustainably and act together on this desire."
@@ -14,6 +15,17 @@
         "li4": "Contribute scientific knowledge on how environmental behavior and practice can be strengthened, influenced and scaled up through community and collective action.",
         "li5": "Follow the distribution of min. 100 green neighboring communities in Denmark.",
         "p2": "The starting point for SAMSKAB is that a significant green transition does not just require political regulation and technological solutions, but also civil action and behavioral changes. The hypothesis in SAMSKAB is based on cooperation and collective action for common goals in green neighborhood communities reinforces environmental behavior and promotes both an environmental and a social agenda."
+    },
+    "p3": {
+        "h1": "Case Studies in Three Residential Areas",
+        "p1": "The project is an extension of the now completed project Compass, which had a special focus on studying eco-communities, food communities and the creation of green communities in existing housing communities and eco-villages.",
+        "p2": "The new project expands the perspective by investigating how, based on various best-practice examples, green communities can be developed in three very different residential areas: From the Copenhagen district of Tingbjerg, which is characterized by non-profit housing and many resource-poor citizens, over the village Hvalsø , which has many new housing associations and resourceful citizens, to Vinge by Frederikssund, which is Denmark's largest urban development project.",
+        "p3": "The experiences from the case studies must provide answers to how residents and housing associations can spread the green communities in both existing 'gray housing areas' and new buildings, but also across ownership forms and different housing and housing forms.",
+        "p4": "The ambition is that the project up to 2025 can help support the establishment of 100 new neighboring communities and at the same time document the social and environmental effect.",
+        "p5": "We want to contribute to the green transition by breaking the code behind the creation of viable communities. Together with practitioners, we will develop tools to facilitate the establishment and upscaling of new green neighborhood communities in different residential areas and housing types.",
+        "p6": "Here, the project's three external partners play a crucial role: The companies Naboskab and Bærebo as well as the association Omstilling Nu must help to ensure the organizational and local anchoring in close partnership with the researchers. The three organizations work in different ways with green conversion and resident communities.",
+        "p7": "In addition, the project collaborates with a number of municipalities, housing organizations and other actors who have an interest in promoting green transformation in the housing sector."
+    
     },
     "infobox": {
         "header": "ABOUT THE PROJECT",

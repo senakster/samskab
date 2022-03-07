@@ -1,3 +1,21 @@
-.Phasebox{
-
+.PhaseBox{
+    .header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        > * {
+            &:first-child {
+                flex-shrink: 0;
+            }    
+            flex-shrink: 1;
+        }
+    }
+        li {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 100%;
+            padding: 4px 0;
+        }
 }

@@ -6,7 +6,7 @@ const c = {
     primaryContrastColor: '#831618',
     secondaryColor: '#9AB9CB',
     secondaryDarkColor: '#748A93',
-    secondaryContrastColor: '#A1CD3A',
+    secondaryContrastColor: '#5C3D00',
     fontFamily: 'Montseratt'
 }
 export default c;

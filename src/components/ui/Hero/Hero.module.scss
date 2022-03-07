@@ -1,0 +1,63 @@
+@import 'src/_style/animations.scss';
+
+.Hero {
+    //DEFAULT CONTRAST
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        background-color: var(--text-color);
+        z-index: -2;
+    }
+    &::before {
+    // z-index: -1; 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-color);
+    opacity: .6;
+    }
+    .content {
+        animation: load-in 1000ms ease-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10vmax;
+        color: var(--background-color);
+        font-size: calc(.5em + 1vmin);
+        text-shadow: 0 0 .2em var(--text-color);
+    }
+    margin-bottom: 20px;
+
+    //LIGHT
+    &.light {
+         &::before {
+            background-color: var(--background-color);
+         }
+         .content {
+             color: var(--text-color)
+         }
+         img {
+             background-color: var(--background-color);
+         }
+    }
+    &.rounded {
+        border-radius: 50vmax;
+    }
+}
