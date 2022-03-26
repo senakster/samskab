@@ -1,6 +1,7 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { people } from '_data/peopleData';
+import logos from '_media/img/logo';
 import ContactCard from '../Contact/ContactCard';
 import styles from './Participants.module.scss';
 
@@ -8,7 +9,15 @@ const Participants: React.FC = () => {
   const {t} = useTranslation('participants')
   return (
     <>
-    <h1 className="page_title">{t('Deltagere')}</h1>
+      <h1 className="page_title">
+        <img
+          alt="main logo"
+          src={logos.logo1HvidKvadrat.url}
+          className={`inline-hImg`}
+        /><Trans ns="participants" i18nKey="title">
+          Deltagere
+        </Trans>
+      </h1>
     <div className={styles.Participants} data-testid="Participants">
       <div className={styles.peopleList}>
         <ContactCard data={people.find(p => p.id === 'KU01')!} />

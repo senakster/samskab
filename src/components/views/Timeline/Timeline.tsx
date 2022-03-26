@@ -10,6 +10,8 @@ import styles from './Timeline.module.scss';
 import WorkPackageBox from './WPBox';
 import { wallpapers } from '_media/img/images';
 import TimeTable from './TimeTable';
+import logos from '_media/img/logo';
+
 const Timeline: React.FC = () => {
   const {t} = useTranslation('timeline')
   const location = useLocation()  
@@ -20,7 +22,12 @@ const Timeline: React.FC = () => {
   }
   return (
     <>
-      <h1 className="page_title">{t('Struktur')}</h1>
+      <h1 className="page_title">            
+      <img
+        alt="main logo"
+        src={logos.logo1HvidKvadrat.url}
+        className={`inline-hImg`}
+      />{t('Struktur')}</h1>
       <div className={styles.Timeline} data-testid="Timeline">
         <Hero classes={[]} height={60} img={wallpapers.find(img => img.id === 'prag')!.url} >
           <h1>

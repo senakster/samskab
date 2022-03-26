@@ -6,12 +6,21 @@ import styles from './About.module.scss';
 import config from '_config';
 import Hero from 'components/ui/Hero/Hero';
 import { wallpapers } from '_media/img/images';
+import logos from '_media/img/logo';
 const About: React.FC = () => {
   const {t} = useTranslation('about');
   return (
     <div className={styles.About} data-testid="About">
-    <div className={styles.Home} data-testid="Home">
-      <h1 className="page_title">{`${t('Om')} Samskab`}</h1>
+        <h1 className="page_title">
+          <img
+            alt="main logo"
+            src={logos.logo1HvidKvadrat.url}
+            className={`inline-hImg`}
+          /><Trans ns="about" i18nKey="pagetitle">
+            Om Samskab
+          </Trans>
+          
+        </h1>
         <Hero height={55} img={`${process.env.PUBLIC_URL}/media/img/grå_bygning.jpg`}>
           <h2>
             <Trans ns={`about`} i18nKey={`title`}>
@@ -151,7 +160,6 @@ const About: React.FC = () => {
         </div>
       </div>
     </div>
-  </div>
 );
 }
 

@@ -3,11 +3,20 @@ import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import styles from './Home.module.scss';
 import publications from '_data/publicationsData';
+import logos from '_media/img/logo';
 const Home: React.FC = () => {
   const { t } = useTranslation('home');
   return (
     <div className={styles.Home} data-testid="Home">
-      <h1 className="page_title">{'SAMSKAB'}</h1>
+      <h1 className="page_title">
+        <img
+          alt="main logo"
+          src={logos.logo1HvidKvadrat.url}
+          className={`inline-hImg`}
+        /><Trans ns="home" i18nKey="title">
+          Samskab
+        </Trans>
+      </h1>
       <div className={`${styles.flex_container} flex_container`}>
         <div className={`${styles.flex_child70} flex_child70`}>
           <h1>

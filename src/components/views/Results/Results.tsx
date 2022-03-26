@@ -16,6 +16,7 @@ import Loading from 'components/global/Loading/Loading';
 import TextIcon from 'components/ui/TextIcon/TextIcon';
 import { wallpapers } from '_media/img/images';
 import Hero from 'components/ui/Hero/Hero';
+import logos from '_media/img/logo';
 // export function onlyUnique(value: string | number, index: number, self: any) {
 //   return self.indexOf(value) === index;
 // }
@@ -51,7 +52,11 @@ const Results: React.FC = () => {
   return (
     <>
       <h1 className="page_title">
-        <Trans ns="results" i18nKey="title">
+        <img
+          alt="main logo"
+          src={logos.logo1HvidKvadrat.url}
+          className={`inline-hImg`}
+        /><Trans ns="results" i18nKey="title">
           Resultater og publikationer
         </Trans>
       </h1>

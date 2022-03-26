@@ -3,6 +3,7 @@ import styles from './Collaborators.module.scss';
 import CollabCard from './CollabCard';
 import { collaborators } from '_data/collabData';
 import { Trans, useTranslation } from 'react-i18next';
+import logos from '_media/img/logo';
 
 
 const Collaborators: React.FC = () => {
@@ -10,7 +11,15 @@ const Collaborators: React.FC = () => {
   return (
     <>
       {/* KERNEPARTNERE */}
-      <h1 className="page_title">{t('Samarbejdspartnere')}</h1>
+      <h1 className="page_title">
+        <img
+          alt="main logo"
+          src={logos.logo1HvidKvadrat.url}
+          className={`inline-hImg`}
+        /><Trans ns="collaborators" i18nKey="title">
+          Samarbejdspartnere
+        </Trans>
+      </h1>
       <div className={styles.Collaborators} data-testid="Collaborators">
         <h2 className={styles.subHeading}>{t('Kernepartnere')}</h2>
         <div className={styles.category}>
