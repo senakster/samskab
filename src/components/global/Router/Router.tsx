@@ -27,7 +27,7 @@ const Router: React.FC = () => {
           <Header>
             <Navigation />
           </Header>
-          <article className={styles.content}>
+          <article className={styles.router_content}>
             <Routes>
               {
                 RouteList.map((r) =>

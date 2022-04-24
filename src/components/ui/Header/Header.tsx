@@ -30,10 +30,10 @@ const Header: React.FC= ({children}) => {
   },[])
   return (
     <div className={`${styles.Header}`} data-testid="Header">
-    <div className={styles.backgroundImage}>
+    {/* <div className={styles.backgroundImage}>
         {fancyBG && <ImageCarousel {...{images: wallpapers, interval, variant}}/>}
-    </div>
-    <div ref={scrollRef} className={` ${scrolled ? styles.scrolled : ''}`}>
+    </div> */}
+    <div ref={scrollRef} className={` ${scrolled && true ? styles.scrolled : ''}`}>
       <LanguageSelector variant="fixed" scroll={scrolled}/>
       <div className={styles.fix_container}>
       <div className={styles.content}>

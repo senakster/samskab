@@ -15,7 +15,7 @@ export type TRoute = {
 }
 
 const RouteList: TRoute[] = [
-    { name: 'Home', categories: ['home'], path: "/", component: Home },
+    { name: 'Home', categories: ['home'], path: "/", component: About },
     { name: 'About', categories: ['about'], path: "/about", component: About },
     { name: 'Timeline', categories: ['about'], path: "/structure", component: Timeline },
     { name: 'Results', categories: ['ressources'], path: "/results", component: Results },

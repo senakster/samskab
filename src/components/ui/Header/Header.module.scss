@@ -12,12 +12,13 @@
     }
     .fix_container {
         .mainLogo {
-             height: 25vw;
+             height: 25%;
              width: 100%;
              transition: top 300ms, opacity 600ms;
              top: 0%;
             img {
                 max-height: 25vw;
+                // max-height: fit-content;
                 transition: top 300ms, opacity 300ms;
                 margin: 0 50%;
                 transform: translateX(-50%);
