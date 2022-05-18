@@ -6,8 +6,9 @@ import config from '_config'
 
 const ContactCard: React.FC<{ data: TPeople }> = ({ data }) => {
     const { t } = useTranslation('contact')
-    return (
-        <div className={styles.ContactCard} style={{'--delay': 400 + Math.ceil(Math.random()*1000)} as React.CSSProperties}>
+    console.log(data)
+        return (
+        !data ? null : <div className={styles.ContactCard} style={{'--delay': 400 + Math.ceil(Math.random()*1000)} as React.CSSProperties}>
             <h3>{t(data.role || 'Deltager')}</h3>
             {<img className={styles.peoplePicture} src={`${data.img ? data.img.url?.replace('__PUBLICURL__', config.public_static || '') : `${config.public_static}/media/img/Logo 1 Hvid Kvadrat SAMSKAB.png`}`} alt={t(data.name)} loading="lazy" />}
             <div className={styles.pData}>

@@ -24,7 +24,7 @@ const ResultCard: React.FC<{data: TResult, focus?: boolean, nonfocus: boolean | 
         <div  
         className={`${styles.ResultCard} 
         ${styles[data.status]}
-         ${nonfocus ? styles.nonfocus : ''}
+        ${nonfocus ? styles.nonfocus : ''}
         ${active ? styles.active : ''}`}
         onClick={toggleActive}>
             {/* ID */}

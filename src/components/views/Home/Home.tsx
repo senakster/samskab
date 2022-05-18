@@ -16,6 +16,11 @@ const Home: React.FC = () => {
         /><Trans ns="home" i18nKey="title">
           Samskab
         </Trans>
+        <img
+          alt="main logo"
+          src={logos.logo1HvidKvadrat.url}
+          className={`inline-hImg`}
+        />
       </h1>
       <div className={`${styles.flex_container} flex_container`}>
         <div className={`${styles.flex_child70} flex_child70`}>

@@ -59,6 +59,11 @@ const Results: React.FC = () => {
         /><Trans ns="results" i18nKey="title">
           Resultater og publikationer
         </Trans>
+        <img
+          alt="main logo"
+          src={logos.logo1HvidKvadrat.url}
+          className={`inline-hImg`}
+        />
       </h1>
       {load_page_map ? (
         <Suspense fallback={<Loading />}>

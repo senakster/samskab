@@ -27,12 +27,13 @@ const PublicationCard: React.FC<{data: TPublication}> = ({data}) => {
                     <p>
                         <Trans ns="results" i18nKey={`${data.id}.name`}>{t(data.name)}</Trans>
                     </p>
-                    {data.author && <p className={styles.authorList}><i>{data.author?.map(a => {
-                        const name = typeof a === 'string' ? <span className={styles.author}>{_data.people.find(p => p.id === a)!.name}</span> : <span className={styles.author}>{a.name}</span>
-                        const author = typeof a === 'string' ? name : <a href={`mailto:${a.email}`}>{name}</a>                     
+                    {data.author && <p className={styles.authorList}>{data.author?.map((a,i) => {
+                        // if (typeof a === 'string' && !_data.people.some(p => p.id === a)) return <span key={i} className={styles.author}>{a}</span>
+                        const name = typeof a === 'string' && _data.people.some(p => p.id === a) ? <span key={`${i}-name`} className={styles.author}>{_data.people.find(p => p.id === a)!.name}</span> : <span key={`${i}-name`} className={styles.author}>{a}</span>
+                        const author = typeof a === 'string' ? name : <a key={`${i}-email`} href={`mailto:${a.email}`}>{name}</a>                     
                         return author
                     }
-                    )}</i></p>}
+                    )}</p>}
                     <p className={styles.published}>{data.published?.year}{data.published?.month && `/${data.published.month}`}</p>
                 </div>
             </div>

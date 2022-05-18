@@ -21,5 +21,15 @@ export const publications = [
         cover: `__PUBLICURL__/media/img/projektbeskrivelse-cover.png`,
         // author: [people.find(p => p.id === 'web1')]
     },  
+    {
+        id: 'pw0-2',
+        title: 'Klimahandling i fællesskab',
+        name: 'Klimahandling i fællesskab',
+        published: { year: 2021 },
+        url: `__PUBLICURL__/media/files/Klimahandling i Fællesskab.pdf`,
+        summary: 'I dette handlekatalog har vi samlet en række projektforslag til, hvordan I kan være med til at gøre jeres boligforening, landsbyfællesskab, gade eller lokalsamfund grønnere i fællesskab med andre. Handlekataloget henvender sig til alle, som ønsker at tage initiativ til og drømmer om at komme i gang med et eller flere meningsfulde klimaprojekter.',
+        cover: `__PUBLICURL__/media/img/klimahandling-cover.png`,
+        author: ['Concito','DeltagerDanmark']
+    },
 ]
 export default publications

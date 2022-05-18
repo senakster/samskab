@@ -17,6 +17,11 @@ const Participants: React.FC = () => {
         /><Trans ns="participants" i18nKey="title">
           Deltagere
         </Trans>
+        <img
+          alt="main logo"
+          src={logos.logo1HvidKvadrat.url}
+          className={`inline-hImg`}
+        />
       </h1>
     <div className={styles.Participants} data-testid="Participants">
       <div className={styles.peopleList}>
@@ -28,6 +33,9 @@ const Participants: React.FC = () => {
           <ContactCard data={people.find(p => p.id === 'BB02')!} />
         <ContactCard data={people.find(p => p.id === 'NB01')!} />
         <ContactCard data={people.find(p => p.id === 'NB02')!} />
+          <ContactCard data={people.find(p => p.id === 'NB03')!} />
+          <ContactCard data={people.find(p => p.id === 'NB04')!} />
+          <ContactCard data={people.find(p => p.id === 'NB05')!} />
           <ContactCard data={people.find(p => p.id === 'ON01')!} />
           <ContactCard data={people.find(p => p.id === 'ON02')!} />
         <ContactCard data={people.find(p => p.id === 'WEB01')!} />

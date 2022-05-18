@@ -15,27 +15,37 @@ const placeholder: TCollabor = {
     href: 'https://omstilmig.nu/GNF/gnf-map/0.3.0/',
     description: 'Placeholder Descripton'
 }
-const CollabCard: React.FC<{data: TCollabor, variant?: string}> = ({data, variant}) => {
-    const {t} = useTranslation('collaborators')
+const CollabCard: React.FC<{ data: TCollabor, variant?: string }> = ({ data, variant }) => {
+    const { t } = useTranslation('collaborators')
     const [active, setActive] = React.useState(false)
-    function toggleActive(){
+    function toggleActive() {
         setActive(!active)
     }
     return (
-        <div className={`${styles.CollabCard} ${variant ? styles[variant]: styles.default}`} style={{ '--brandColor': data.color || placeholder.color! } as React.CSSProperties} onClick={toggleActive}>
-            <div className={styles.logo}>
-                <div className={styles.filter}></div>
-                <div className={styles.imgContainer}>
-                <img src={data.logo?.url.replace('%PUBLIC_URL%',`${process.env.PUBLIC_URL}`) || placeholder.logo!.url} alt={`${data.logo?.id}`} loading="lazy" />
+        <div className={`${styles.CollabCard} ${variant ? styles[variant] : styles.default}`} style={{ '--brandColor': data.color || placeholder.color! } as React.CSSProperties} onClick={toggleActive}>
+            {variant === 'logoOnly' ?
+                <a href={data.href} rel="noreferrer" target="_blank">
+                    <div className={styles.logo}>
+                        <div className={styles.filter}></div>
+                        <div className={styles.imgContainer}>
+                            <img src={data.logo?.url.replace('%PUBLIC_URL%', `${process.env.PUBLIC_URL}`) || placeholder.logo!.url} alt={`${data.logo?.id}`} loading="lazy" />
+                        </div>
+                    </div>
+                </a> :
+                <div className={styles.logo}>
+                    <div className={styles.filter}></div>
+                    <div className={styles.imgContainer}>
+                        <img src={data.logo?.url.replace('%PUBLIC_URL%', `${process.env.PUBLIC_URL}`) || placeholder.logo!.url} alt={`${data.logo?.id}`} loading="lazy" />
+                    </div>
                 </div>
-            </div>
+            }
             <div className={styles.content}>
                 <h1 className={styles.name}>{t(data.name)}</h1>
                 <a href={data.href} rel="noreferrer" target="_blank"><span>{data.href}</span></a>
                 <p className={`${styles.more} ${active ? styles.active : ''}`}>{/*t('om')*/}</p>
                 <p className={`${styles.description} ${active ? styles.active : ''}`}>
                     <Trans ns="collaborators" i18nKey={`${data.id}`}>
-                    {t(data.description)}
+                        {t(data.description)}
                     </Trans>
                 </p>
             </div>

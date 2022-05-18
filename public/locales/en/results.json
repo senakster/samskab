@@ -1,6 +1,6 @@
 {
     "pagetitle": "A collection of catalogs, manuals and reports published during the project",
-    "title": "Results and Publications",
+    "title": "Documents",
     "opsummering": "summary",
     "Publikationer": "publications",
     "Andre Resultater": "Other Results",
@@ -14,6 +14,11 @@
         "title": "Project desription",
         "name": "Project 40322: SAMSKAB - FROM GRAY HOUSING ASSOCIATIONS TO GREEN NEIGHBORHOOD COMMUNITIES (in danish)",
         "summary": "The project challenges the notion that the green transition takes place primarily through individual behavior and technological change by pointing out that it can take place just as much as a fundamental social change involving neighboring communities. The project contributes knowledge and tools that can support the establishment of completely new green neighborhood communities as well as the transition from gray housing associations to green neighborhood communities and thereby strengthen the green transition. Gray housing associations are referred to here as housing associations that do not have a direct focus on the environment, climate and sustainability, while green neighboring communities are defined as green, where their members share the desire to live more sustainably and act together on this desire."
+    },
+    "pw0-2": {
+        "title": "Action Catalog",
+        "name": "Climate Action in Collaboration (in danish)",
+        "summary": "In this catalog of actions, we have collected a number of project proposals to how you can help make your housing association, city, street or community greener in collaboration with other people. The action catalog caters to everyone who wants to take the initiative and dreams of embarking on meaningful climate projects."
     },
     "wp1-r1": {
         "title": "Catalog of Ideas",
@@ -151,5 +156,4 @@
         "title": "Meetings",
         "description": "Meetings of the Advisory Panel (minimum two meetings per year)."
     }
-
 }

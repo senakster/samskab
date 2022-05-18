@@ -16,8 +16,11 @@
   .page_title {
     display: block;
     width: 100%;
-    font-size: min(2.2em, 7vw);
+    font-size: min(2.1em, 4.7vmax);
+    white-space: nowrap;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
     opacity: 1;
     animation: fade-in 700ms forwards;
     &::after {

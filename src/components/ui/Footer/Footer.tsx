@@ -32,7 +32,7 @@ const KernepartnerLogoer: React.FC = () => {
   return (
     <div className={styles.KernepartnerLogoer}>
       {collaborators.key_partners.map((c) =>
-        <CollabCard key={c.id} variant="logoOnly" data={c} />
+        <CollabCard  variant="logoOnly" data={c} />
       )}
       <CollabCard variant='logoOnly' data={collaborators.funding[0]} />
     </div>
