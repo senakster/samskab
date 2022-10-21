@@ -23,17 +23,17 @@ const Timeline: React.FC = () => {
   return (
     <>
       <h1 className="page_title">            
-      <img
+      {/* <img
         alt="main logo"
         src={logos.logo1HvidKvadrat.url}
         className={`inline-hImg`}
-      />{t('Struktur')}
-      
-        <img
+      /> */}
+      {t('Struktur')}
+      {/* <img
           alt="main logo"
           src={logos.logo1HvidKvadrat.url}
           className={`inline-hImg`}
-        />
+        /> */}
       </h1>
       <div className={styles.Timeline} data-testid="Timeline">
         <Hero classes={[]} height={60} img={wallpapers.find(img => img.id === 'prag')!.url} >

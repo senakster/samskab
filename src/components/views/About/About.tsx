@@ -12,18 +12,19 @@ const About: React.FC = () => {
   return (
     <div className={styles.About} data-testid="About">
         <h1 className="page_title">
-          <img
+          {/* <img
             alt="main logo"
             src={logos.logo1HvidKvadrat.url}
             className={`inline-hImg`}
-          /><Trans ns="about" i18nKey="pagetitle">
+          /> */}
+          <Trans ns="about" i18nKey="pagetitle">
             Om Samskab
           </Trans>
-        <img
+        {/* <img
           alt="main logo"
           src={logos.logo1HvidKvadrat.url}
           className={`inline-hImg`}
-        />
+        /> */}
         </h1>
         <Hero height={55} img={`${process.env.PUBLIC_URL}/media/img/grå_bygning.jpg`}>
           <h2>

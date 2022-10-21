@@ -10,18 +10,19 @@ const Participants: React.FC = () => {
   return (
     <>
       <h1 className="page_title">
-        <img
+        {/* <img
           alt="main logo"
           src={logos.logo1HvidKvadrat.url}
           className={`inline-hImg`}
-        /><Trans ns="participants" i18nKey="title">
+        /> */}
+        <Trans ns="participants" i18nKey="title">
           Deltagere
         </Trans>
-        <img
+        {/* <img
           alt="main logo"
           src={logos.logo1HvidKvadrat.url}
           className={`inline-hImg`}
-        />
+        /> */}
       </h1>
     <div className={styles.Participants} data-testid="Participants">
       <div className={styles.peopleList}>

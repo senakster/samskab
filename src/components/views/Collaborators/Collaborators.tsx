@@ -12,18 +12,19 @@ const Collaborators: React.FC = () => {
     <>
       {/* KERNEPARTNERE */}
       <h1 className="page_title">
-        <img
+        {/* <img
           alt="main logo"
           src={logos.logo1HvidKvadrat.url}
           className={`inline-hImg`}
-        /><Trans ns="collaborators" i18nKey="title">
+        /> */}
+        <Trans ns="collaborators" i18nKey="title">
           Samarbejdspartnere
         </Trans>
-        <img
+        {/* <img
           alt="main logo"
           src={logos.logo1HvidKvadrat.url}
           className={`inline-hImg`}
-        />
+        /> */}
       </h1>
       <div className={styles.Collaborators} data-testid="Collaborators">
         <h2 className={styles.subHeading}>{t('Kernepartnere')}</h2>

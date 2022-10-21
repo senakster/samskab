@@ -9,18 +9,19 @@ const Home: React.FC = () => {
   return (
     <div className={styles.Home} data-testid="Home">
       <h1 className="page_title">
-        <img
+        {/* <img
           alt="main logo"
           src={logos.logo1HvidKvadrat.url}
           className={`inline-hImg`}
-        /><Trans ns="home" i18nKey="title">
+        /> */}
+        <Trans ns="home" i18nKey="title">
           Samskab
         </Trans>
-        <img
+        {/* <img
           alt="main logo"
           src={logos.logo1HvidKvadrat.url}
           className={`inline-hImg`}
-        />
+        /> */}
       </h1>
       <div className={`${styles.flex_container} flex_container`}>
         <div className={`${styles.flex_child70} flex_child70`}>
