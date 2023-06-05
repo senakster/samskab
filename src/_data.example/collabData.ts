@@ -18,8 +18,8 @@ const key_partners: TCollabor[] = [
         description: "Københavns Universitet (KU) leverer forskning i verdensklasse om miljøadfærd og miljø governance. Forskerne står bl.a. bag  Compass forskningsprojektet og er eksperter i politiske og sociale aspekter af den grønne omstilling. En Ph.d. studerende tilknyttes projektet."
     },
     {
-        id: 'bb', name: 'Bærebo', logo: images.find(i => i.id === 'bb_logo'), color: "#9ebc99", href: "https://www.baerebo.org/",
-        description: "Bærebo er eksperter i oprettelsen af nye bæredygtige bofællesskaber, der kan ‘mainstreame’ økosamfundsbevægelsen. Arbejder tæt sammen med Landsforeningen for Økosamfund og Foreningen Bofællesskab.dk, bl.a. med at etablere en ‘startpakke’ til nye bofællesskaber.",
+        id: 'bb', name: 'Bofællesskab.dk', logo: images.find(i => i.id === 'bb_logo'), color: "#9ebc99", href: "https://bofaellesskab.dk/",
+        description: "Bofællesskab.dk er eksperter i oprettelsen af nye bæredygtige bofællesskaber, der kan ‘mainstreame’ økosamfundsbevægelsen. Arbejder med at etablere en ‘startpakke’ til nye bofællesskaber.",
     },
     {
         id: 'nb', name: 'Behave Green', logo: images.find(i => i.id === 'nb_logo'), color: "#1a4443", href: "https://Behave Green.dk/",

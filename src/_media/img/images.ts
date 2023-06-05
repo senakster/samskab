@@ -74,7 +74,7 @@ const nb_logo = {
 }
 const bb_logo = {
     id: `bb_logo`,
-    url: `${process.env.PUBLIC_URL}/media/img/Baerebo logo close cut stor.png`
+    url: `https://bofaellesskab.dk/images/logo/logo_bofaellesskab_dk.svg`
 }
 const on_logo = {
     id: `on_logo`,
