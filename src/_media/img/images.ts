@@ -70,7 +70,7 @@ const ku_logo = {
 }
 const nb_logo = {
     id: `nb_logo`,
-    url: `https://naboskab.dk/wp-content/uploads/2020/07/logofont-sharp-sdg.png`
+    url: `${process.env.PUBLIC_URL}/media/img/behavegreen logo primær.png`
 }
 const bb_logo = {
     id: `bb_logo`,

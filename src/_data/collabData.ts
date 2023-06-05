@@ -22,8 +22,8 @@ const key_partners: TCollabor[] = [
         description: "Bærebo er eksperter i oprettelsen af nye bæredygtige bofællesskaber, der kan ‘mainstreame’ økosamfundsbevægelsen. Arbejder tæt sammen med Landsforeningen for Økosamfund og Foreningen Bofællesskab.dk, bl.a. med at etablere en ‘startpakke’ til nye bofællesskaber.",
     },
     {
-        id: 'nb', name: 'Naboskab', logo: images.find(i => i.id === 'nb_logo'), color: "#1a4443", href: "https://naboskab.dk/",
-        description: "Naboskab er eksperter i at forstå fællesskaber, kollektiv handling og adfærd i krydsfeltet mellem grøn omstilling og levede liv. Er involveret i mange projekter og trækker på en praktisk erfaring med viden og værktøjer, der kan skabe grøn og social omstilling i boligområder.",
+        id: 'nb', name: 'Behave Green', logo: images.find(i => i.id === 'nb_logo'), color: "#1a4443", href: "https://behavegreen.dk/",
+        description: "Behave Green er eksperter i at forstå fællesskaber, kollektiv handling og adfærd i krydsfeltet mellem grøn omstilling og levede liv. Er involveret i mange projekter og trækker på en praktisk erfaring med viden og værktøjer, der kan skabe grøn og social omstilling i boligområder.",
     },
     {
         id: 'on', name: 'Omstilling NU', logo: images.find(i => i.id === 'on_logo'), color: "#a8c350", href: "https://omstilling.nu",
@@ -47,7 +47,7 @@ const forskningssamarbejdspartnere: TCollabor[] = [
         description: "BUILD - Institut for Byggeri, By og Miljø har sit udgangspunkt i ingeniørvidenskaben, men indeholder også vigtige og omfattende elementer fra samfundsvidenskab og humaniora. Dette giver os mulighed for at forske, rådgive og uddanne helhedsorienteret i by-, bolig- og anlægsområdets komplekse problemstillinger.",
     },
     {
-        id: 'concito', name: 'Concito', logo: { id: 'oncito_logo', url: 'https://concito.dk/sites/concito.dk/files/concito_logo.png' }, color: "#75a936", href: "https://concito.dk/",
+        id: 'concito', name: 'Concito', logo: { id: 'concito_logo', url: 'https://concito.dk/sites/concito.dk/files/concito_logo.png' }, color: "#75a936", href: "https://concito.dk/",
         description: "CONCITO ønsker at bygge bro mellem klimaløsningerne i Danmark og den globale grønne omstilling, både ved at bringe danske og nordiske løsninger ud internationalt og ved at bringe vigtig global viden ind i en dansk kontekst. Derfor engagerer CONCITO sig også i internationale partnerskaber og netværk, herunder bl.a. med World Ressource Institute og nordiske tænketanke",
     },
     {

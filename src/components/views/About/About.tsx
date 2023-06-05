@@ -129,7 +129,7 @@ const About: React.FC = () => {
           </p>
           <p>
             <Trans ns={`about`} i18nKey={`p3.p6`}>
-              Her spiller projektets tre eksterne partnere en afgørende rolle: Virksomhederne Naboskab og Bærebo samt foreningen Omstilling Nu skal være med til at sikre den organisatoriske og lokale forankring i tæt parløb med forskerne. De tre organisationer arbejder på forskellig vis med grøn omstilling og beboerfællesskaber.
+              Her spiller projektets tre eksterne partnere en afgørende rolle: Virksomhederne Behave Green og Bærebo samt foreningen Omstilling Nu skal være med til at sikre den organisatoriske og lokale forankring i tæt parløb med forskerne. De tre organisationer arbejder på forskellig vis med grøn omstilling og beboerfællesskaber.
             </Trans>
           </p>
           <p>
@@ -145,7 +145,7 @@ const About: React.FC = () => {
             <p>{t('infobox.p1')}</p>
             <p>
               <Trans ns="about" i18nKey="infobox.p2">
-                Projektet er et samarbejde mellem fire kernepartnere (<a href='https://www.ku.dk/' rel="noreferrer" target="_blank">Københavns Universitetet</a>, <a href='https://naboskab.dk/' rel="noreferrer" target="_blank">Naboskab</a>, <a href='https://www.baerebo.org/' rel="noreferrer" target="_blank">Bærebo</a>, <a href='https://omstilling.nu' rel="noreferrer" target="_blank">Omstilling Nu</a>). Herudover inddrager projektet kommuner, boligorganisationer og andre aktører inden for grøn omstilling i boligsektoren.
+                Projektet er et samarbejde mellem fire kernepartnere (<a href='https://www.ku.dk/' rel="noreferrer" target="_blank">Københavns Universitetet</a>, <a href='https://behavegreen.dk/' rel="noreferrer" target="_blank">Behave Green</a>, <a href='https://www.baerebo.org/' rel="noreferrer" target="_blank">Bærebo</a>, <a href='https://omstilling.nu' rel="noreferrer" target="_blank">Omstilling Nu</a>). Herudover inddrager projektet kommuner, boligorganisationer og andre aktører inden for grøn omstilling i boligsektoren.
               </Trans>
             </p>
             <p>

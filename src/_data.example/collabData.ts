@@ -22,8 +22,8 @@ const key_partners: TCollabor[] = [
         description: "Bærebo er eksperter i oprettelsen af nye bæredygtige bofællesskaber, der kan ‘mainstreame’ økosamfundsbevægelsen. Arbejder tæt sammen med Landsforeningen for Økosamfund og Foreningen Bofællesskab.dk, bl.a. med at etablere en ‘startpakke’ til nye bofællesskaber.",
     },
     {
-        id: 'nb', name: 'Naboskab', logo: images.find(i => i.id === 'nb_logo'), color: "#1a4443", href: "https://naboskab.dk/",
-        description: "Naboskab er eksperter i at forstå fællesskaber, kollektiv handling og adfærd i krydsfeltet mellem grøn omstilling og levede liv. Er involveret i mange projekter og trækker på en praktisk erfaring med viden og værktøjer, der kan skabe grøn og social omstilling i boligområder.",
+        id: 'nb', name: 'Behave Green', logo: images.find(i => i.id === 'nb_logo'), color: "#1a4443", href: "https://Behave Green.dk/",
+        description: "Behave Green er eksperter i at forstå fællesskaber, kollektiv handling og adfærd i krydsfeltet mellem grøn omstilling og levede liv. Er involveret i mange projekter og trækker på en praktisk erfaring med viden og værktøjer, der kan skabe grøn og social omstilling i boligområder.",
     },
     {
         id: 'on', name: 'Omstilling NU', logo: images.find(i => i.id === 'on_logo'), color: "#a8c350", href: "https://omstilling.nu",
