@@ -122,7 +122,7 @@ Erfaringerne fra casestudierne skal give svar på, hvordan beboere og boligselsk
           </p>
           <p>
             <Trans ns={`home`} i18nKey={`p3.p6`}>
-              Her spiller projektets tre eksterne partnere en afgørende rolle: Virksomhederne Behave Green og Bærebo samt foreningen Omstilling Nu skal være med til at sikre den organisatoriske og lokale forankring i tæt parløb med forskerne. De tre organisationer arbejder på forskellig vis med grøn omstilling og beboerfællesskaber.
+              Her spiller projektets tre eksterne partnere en afgørende rolle: Virksomhederne Behave Green og Bofællesskab.dk samt foreningen Omstilling Nu skal være med til at sikre den organisatoriske og lokale forankring i tæt parløb med forskerne. De tre organisationer arbejder på forskellig vis med grøn omstilling og beboerfællesskaber.
             </Trans>
           </p>
           <p>
@@ -138,7 +138,7 @@ Erfaringerne fra casestudierne skal give svar på, hvordan beboere og boligselsk
             <p>{t('infobox.p1')}</p>
             <p>
               <Trans ns="home" i18nKey="infobox.p2">
-                Projektet er et samarbejde mellem fire kernepartnere (<a href='https://www.ku.dk/' rel="noreferrer" target="_blank">Københavns Universitetet</a>, <a href='https://behavegreen.dk/' rel="noreferrer" target="_blank">Behave Green</a>, <a href='https://www.baerebo.org/' rel="noreferrer" target="_blank">Bærebo</a>, <a href='https://omstilling.nu' rel="noreferrer" target="_blank">Omstilling Nu</a>). Herudover inddrager projektet kommuner, boligorganisationer og andre aktører inden for grøn omstilling i boligsektoren.
+                Projektet er et samarbejde mellem fire kernepartnere (<a href='https://www.ku.dk/' rel="noreferrer" target="_blank">Københavns Universitetet</a>, <a href='https://behavegreen.dk/' rel="noreferrer" target="_blank">Behave Green</a>, <a href='https://bofaellesskab.dk/' rel="noreferrer" target="_blank">Bofællesskab.dk</a>, <a href='https://omstilling.nu' rel="noreferrer" target="_blank">Omstilling Nu</a>). Herudover inddrager projektet kommuner, boligorganisationer og andre aktører inden for grøn omstilling i boligsektoren.
               </Trans>
             </p>
             <p>
